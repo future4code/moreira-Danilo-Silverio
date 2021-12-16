@@ -5,8 +5,9 @@
   **/
 
 * {
-    margin: 0;
-    padding: 0;
+    
+    margin-bottom: 100;
+    padding-bottom: 100;
 }
 
 h2 {
@@ -116,7 +117,8 @@ div:last-child {
 }
 
 table {
-    width: 60%;
+    width: 2000px;
+    height: 50%;
     text-align: center;
 }
 
