@@ -31,7 +31,7 @@ img {
 
 div>p:first-child {
     display: inline;
-}
+    }
 
 div img {
     background: black;
@@ -45,7 +45,7 @@ div img {
     font-size: 20px;
     color: white;
     text-align: center;
-    position: static;
+    
 }
 
 .botao-amarelo:hover {
@@ -72,6 +72,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding: 68px 0px;
 }
 
 #container-de-descricao>ol {
