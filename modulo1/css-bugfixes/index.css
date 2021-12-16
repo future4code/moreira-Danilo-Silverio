@@ -73,6 +73,11 @@ div img {
     background-color: #2274a5;
     color: white;
     padding: 68px 0px;
+    
+}
+
+#formatacao-secao-azul {
+    display: block;
 }
 
 #container-de-descricao>ol {
