@@ -1,4 +1,4 @@
-/* HOME - PRESETS */
+/* HOME - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
 
 * {margin: 0px; padding: 0;}
 
@@ -6,7 +6,7 @@
 
         .screen{ width: 1300px; margin: 0 auto;}
 
-/* HEADER - PRESETS */
+/* HEADER - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
 
 .header{
     position: fixed;
@@ -37,7 +37,7 @@
                         text-shadow: 1px 2px 1px gray;
                         font-size: 25px;}
 
-/* INITIAL PAGE - PRESETS */
+/* INITIAL PAGE - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
 
 .my-portfolio{
     width: 100%;
@@ -168,7 +168,7 @@
         display: flex;
         background-image: linear-gradient(to bottom, #a3a8a6, white);}
 
-/* CONTACT PAGE - PRESETS */
+/* CONTACT PAGE - PRESETS --------------------------------------------------------------------------------------------------------------------------------------*/
 
 .contact-form{
     width: 100%;
@@ -188,4 +188,74 @@
         text-transform: uppercase;
         color: white;}
 
+            .body-content{
+                font-family: inherit;
+                font-size: 1.6em;
+                border: none;
+                margin-left: 5%;
+                width: 90%;
+                margin-top: 13%;}
+
+                table{
+                    border: 0;
+                    font-family: inherit;
+                    font-size: 1em;
+                    color:#080f0c;
+                    box-shadow: rgb(0, 2, 0, 0.2);
+                    margin-left: 0px;
+                    margin-top: 3.3%;
+                    text-align: center;
+                    display: block;}
+
+                    input, select, textarea{
+                        border-radius: 50px;
+                        margin-left: 2px;
+                        padding: 5px;
+                        width: 250px;
+                        justify-content: center;}
+
+                        #about-you{
+                            margin-top: 4%;
+                            margin-bottom: 3%;
+                            width: 696px;
+                            height: 36px;
+                            position: static;
+                            text-emphasis: none;
+                            text-align: left;}
+
+                            button{
+                                height: 30px;
+                                width: 100px;
+                                margin-top: 80px;
+                                float: left;
+                                border-radius: 50px;
+                                margin-left: 2px;
+                                padding: 5px;
+                                width: 250px;
+                                justify-content: center;}
+
+                                button:hover{
+                                    background-color:  #02331c;
+                                    color:whitesmoke;
+                                    text-shadow: 1px, 2px, 1px gray;}
+
+                                    .footer-space-contact{
+                                        height: 300px;
+                                        padding-bottom: 11px;}
+                                    
+                                        .footer-contact{
+                                            z-index: 12;
+                                            background-image: linear-gradient(to bottom, #a3a8a6, white);
+                                            width: 1350px;
+                                            height: 110px;
+                                            left: 0;
+                                            position: absolute;
+                                            display: block}
+
+                                            .screen-contact{ width: 1300px;margin: 0 auto;}
+
+                        
+                        
+                       
+                       
             

@@ -25,57 +25,68 @@
         </div>
     </header>
 
-    <div>
-        <div class="contact-form">
-        <h1>Contact form</h1>
+<div>
+    <div class="contact-form">
+    <h1>Contact form</h1>
+</div>
+
+<div class="body-content">
+    <div class="screen-contact">
+
+<form>
+    <table> 
+        <tr>
+             <td>
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" name="name" id="name">
+        </td>
+            <td>
+            <label for="lastname"><strong>Last Name:</strong></label>
+            <input type="text" name="lastname" id="lastname">
+        </td>
+             <td>
+            <label for="email"><strong>E-mail:</strong></label>
+            <input type="text" name="email" id="email">
+        </td>                                                                     
+    </table>
+<table>
+    <tr>
+        <td>
+           <label><strong>How you met me:</strong></label>
+                <select>
+                    <option selected disabled value="">Select...</option>
+                    <option>Labenu</option>
+                    <option>Linkedin</option>
+                    <option>GitHub</option>
+                    <option>Instagram</option>
+                    <option>Google</option>
+                    <option>Friends</option>
+                    <option>Others</option>
+                </select>
+        </td>
+    </tr>
+</table>
+<div id="about-you">
+    <label><strong>Tell me a little about you:</strong></label>
+    <textarea rows="6" id="about-you" name="about-you"></textarea>
+</div>
+<div>
+<button type="submit">Submit</button>
+    </form>
     </div>
-
-    <div class="initial-content">
-        <div class="screen">
-            <form>
-                <fieldset>
-                    <div>
-                        <label><strong>Name:</strong></label>
-                        <input type="text" name="name" id="name">
-                    </div>
-
-                    <div>
-                        <label><strong>Last Name:</strong></label>
-                        <input type="text" name="lastname" id="lastname">
-                    </div>
-
-                </fieldset>
-
-                    <div>
-                        <label><strong>Email:</strong></label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    
-                    <div>
-                        <label><strong>Reason for conctacting</strong></label>
-                            <label>
-                                <input type="radio" name="reasoncontact" id="reasoncontact" checked> Job Interview
-                            </label>
-
-                            <label>
-                                <input type="radio" name="reasoncontact" id="reasoncontact"> Freelancer
-                            </label>
-
-                            <label>
-                                <input type="radio" name="reasoncontact" id="reasoncontact"> Study Partner
-                            </label>
-
-                            <label>
-                                <input type="radio" name="reasoncontact" id="reasoncontact"> Just to chat
-                            </label>
-
-                            <label>
-                                <input type="radio" name="reasoncontact" id="reasoncontact"> Make a new friend
-                            </label>
-                    </div>
-
-    </div>
-        </form>
-
+    <div class="footer-space-contact"></div>
+    
+    <footer>
+        <div class="footer-contact">
+            <div class="screen">
+                 <img src="logo.png" id="my-brand">  
+                     <nav>
+                        <a href="https://www.linkedin.com/in/danilogsilverio/" target="_blank">linkedin</a>
+                        <a href="https://github.com/Danilo-Silverio" target="_blank">GitHub</a>
+                        <a href="https://www.instagram.com/danilo_silveri/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/danilo.silverio.3" target="_blank">Facebook</a>
+                    </nav>
+        </div>
+    </footer>
 </body>
 </html>
