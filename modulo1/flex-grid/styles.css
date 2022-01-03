@@ -69,12 +69,37 @@ main{
                     margin-left: 260px;
                     gap: 20px;}
 
-                    section{
+                    .cakes-catalog{
                         display: grid;
                         text-align: center;
-                        padding: 0px 10px;
+                        padding: 0 10px;
                         grid-template-columns: 1fr 1fr 1fr 1fr;
-                        justify-content: center;}
+                        grid-template-rows: 1fr 1fr;
+                        width: 200px;}
+
+                        .catalog-model{
+                            background-color: white;
+                            box-shadow: 3px 2px 5px rgba(41, 41, 40, 0.562);
+                            margin: 15px 10px;
+                            width: 200px;}
+
+                            .cakes-catalog img{
+                                width: 200px;
+                                height: 120px;}
+
+                                .cakes-catalog p{
+                                    padding-top: 15px;
+                                    padding-bottom: 15px;
+                                    font-size: 13px;
+                                }
+
+
+
+                       
+
+
+
+                        
 
 
                    
@@ -86,7 +111,7 @@ main{
 /*FOOTER -------------------------->*/
 
 footer{
-    position: absolute;
+    position: fixed;
     width: 100%;
     background-color: mediumvioletred;
     height: 50px;
