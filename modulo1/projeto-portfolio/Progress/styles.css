@@ -1,0 +1,406 @@
+/* HOME - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {margin: 0px; padding: 0;}
+
+    body {text-align: center;}
+
+        .screen{ width: 1300px; margin: 0 auto;}
+
+/* HEADER - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    background-image: linear-gradient(to bottom, #a3a8a6, white);}
+
+     #my-brand{
+        display: block;
+        float: left;
+        margin-left: 0;
+        padding: 18px;
+        width: auto;
+        height: 73px;}
+        
+        nav{float: right; line-height: 110px;}
+        
+            nav a{
+                text-decoration: none;
+                font-family: inherit;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 20px;
+                margin: 10px;
+                color: #02331c;}
+
+                    nav a:hover{ 
+                        text-shadow: 1px 2px 1px gray;
+                        font-size: 25px;}
+
+/* INITIAL PAGE - PRESETS-------------------------------------------------------------------------------------------------------------------------------------- */
+
+.my-portfolio{
+    width: 100%;
+    height: 370px;
+    position: relative;
+    top: 100px;
+    background-image: url('cover-career.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;}
+    
+    .my-portfolio h1{
+        text-align: center;
+        padding-top: 8%;
+        font-size: 85px;
+        font-family: inherit;
+        text-shadow: 1px 2px 1px rgb(17, 16, 16);
+        text-transform: uppercase;
+        color: white;}
+   
+        .my-portfolio h3{
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family: 'Lucida Sans';
+            text-shadow: 7px 9px 7px rgb(17, 16, 16);
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: white;}
+            
+            .trace{
+                width: 1313px;
+                left:0; 
+                border: 5px double whitesmoke;
+                height: 95px;}
+
+                #my-picture{
+                    display: block;
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    padding-top: 100px;}
+
+                    #my-name{
+                        padding-top: 100px;
+                        text-transform: uppercase;
+                        text-align: left;
+                        font-size: 70px;
+                        color: whitesmoke;
+                        text-shadow: 7px 9px 7px rgb(22, 22, 22);}
+
+                        #my-informations{
+                            text-transform: uppercase;
+                            text-align: left;
+                            padding-top: 46px;
+                            padding-left: 15px;
+                            font-size: 23px;
+                            color: rgb(238, 229, 229);
+                            text-shadow: 7px 9px 7px rgb(22, 22, 22); }
+
+                            .initial-content{
+                                width: 100%;
+                                position: relative;
+                                top: 100px;
+                                background-color: rgba(255, 255, 255, 0.67);
+                                height: 1100px;}
+
+                                .initial-content h2{
+                                    text-align: center;
+                                    font-family: inherit;
+                                    letter-spacing: 4px;
+                                    padding-top: 73px;
+                                    font-size: 30px;
+                                    text-transform: uppercase;
+                                    margin: 0;
+                                    color: #02331c;}
+
+                                    .initial-content p{
+                                        padding: 2% 0;
+                                        letter-spacing: 2px;
+                                        word-spacing: 2px;
+                                        font-size: 20px;
+                                        font-family: inherit;
+                                        line-height: 30px;
+                                        text-align: justify;}
+
+                                        .initial-content h3{
+                                            text-align: center;
+                                            font-family: inherit;
+                                            letter-spacing: 4px;
+                                            padding-top: 33px;
+                                            font-size: 30px;
+                                            text-transform: uppercase;
+                                            margin: 0;
+                                            color: #02331c;}
+
+                                            .initial-content h4{
+                                                display: block;
+                                                text-align: left;
+                                                font-family: inherit;
+                                                letter-spacing: 4px;
+                                                padding-top: 33px;
+                                                font-size: 19px;
+                                                text-transform: uppercase;
+                                                margin: 0;
+                                                color: #02331c;}
+
+                                                .initial-content li{
+                                                    padding: 20px;
+                                                    font-size: 20px;
+                                                    font-family: inherit;
+                                                    line-height: 1px;
+                                                    text-align: left;}
+
+                               
+/* FOOTER - PRESETS */
+
+.footer-space{
+    height: 0px;
+    padding-bottom: 11px;}
+
+    .footer{
+        z-index: 12;
+        width: 100%;
+        height: 111px;
+        position: absolute;
+        height: 111px;
+        display: flex;
+        background-image: linear-gradient(to bottom, #a3a8a6, white);}
+
+/* CONTACT PAGE - PRESETS --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-form{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    background-image: url('cover-career.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;}
+
+    .contact-form h1{
+        text-align: center;
+        padding-top: 8.5%;
+        font-size: 73px;
+        font-family: inherit;
+        text-shadow: 1px 2px 1px rgb(17, 16, 16);
+        text-transform: uppercase;
+        color: white;}
+
+            .body-content{
+                font-family: inherit;
+                font-size: 1.6em;
+                border: none;
+                margin-left: 5%;
+                width: 1190px;
+                margin-top: 13%;
+                height: 440px;
+                padding-top: 1.1%;
+                padding-left: 1.1%;
+                border-radius: 50px;
+                background-color:rgba(255, 255, 255, 0.6)}
+
+                table{
+                    border: 0;
+                    font-family: inherit;
+                    font-size: 1em;
+                    color:#080f0c;
+                    box-shadow: rgb(0, 2, 0, 0.2);
+                    margin-left: 0px;
+                    margin-top: 3.3%;
+                    text-align: center;
+                    display: block;}
+
+                    input, select, textarea{
+                        border-radius: 50px;
+                        margin-left: 2px;
+                        padding: 5px;
+                        width: 250px;
+                        justify-content: center;}
+
+                        #about-you{
+                            margin-top: 4%;
+                            margin-bottom: 3%;
+                            width: 696px;
+                            height: 36px;
+                            position: static;
+                            text-emphasis: none;
+                            text-align: left;}
+
+                            #contact-button{
+                                height: 30px;
+                                width: 100px;
+                                margin-top: 80px;
+                                float: left;
+                                border-radius: 50px;
+                                margin-left: 2px;
+                                padding: 5px;
+                                width: 250px;
+                                justify-content: center;}
+
+                                button:hover{
+                                    background-color:  #02331c;
+                                    color:whitesmoke;
+                                    text-shadow: 1px, 2px, 1px gray;}
+
+                                    .footer-space-contact{
+                                        height: 300px;
+                                        padding-bottom: 11px;}
+                                    
+                                        .footer-contact{
+                                            z-index: 12;
+                                            background-image: linear-gradient(to bottom, #a3a8a6, white);
+                                            width: 1400px;
+                                            height: 110px;
+                                            left: 0;
+                                            position: absolute;
+                                            display: block}
+
+                                            .screen-contact{ width: 1300px;margin: 0 auto;}
+
+/* CAREER PAGE - PRESETS --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.my-career{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    background-image: url('cover-career.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;}
+    
+    .my-career h1{
+        text-align: center;
+        padding-top: 8.5%;
+        font-size: 85px;
+        font-family: inherit;
+        text-shadow: 1px 2px 1px rgb(17, 16, 16);
+        text-transform: uppercase;
+        color: white;}
+
+       .career-content{
+            width: 100%;
+            position: relative;
+            top: 10 0px;
+            height: 1600px;}
+
+                .career-content p{
+                    padding: 2% 0;
+                    letter-spacing: 2px;
+                    word-spacing: 2px;
+                    font-size: 20px;
+                    font-family: inherit;
+                    line-height: 30px;
+                    text-align: justify;}
+
+                    .career-content h3{
+                        text-align: center;
+                        font-family: inherit;
+                        letter-spacing: 4px;
+                        padding-top: 130px;
+                        font-size: 30px;
+                        text-transform: uppercase;
+                        margin: 0;
+                        color: #02331c;}
+
+                        .career-content h4{
+                            background-color: white;
+                            border-radius: 25px;
+                            display: block;
+                            text-align: center;
+                            font-family: inherit;
+                            letter-spacing: 4px;
+                            padding-top: 10px;
+                            font-size: 19px;
+                            text-transform: uppercase;
+                            margin-top: 35px;
+                            margin-left: 25px;
+                            color: #02331c;}
+
+                            .career-content li{
+                                background-color:rgba(255,255,255,0.56);
+                                padding: 20px;
+                                font-size: 20px;
+                                font-family: inherit;
+                                line-height: 20px;
+                                text-align: left;
+                                display: block;}
+
+                                .footer-space-career{
+                                    height: 120px;
+                                    padding-bottom: 11px;}
+                                
+                                    .footer-career{
+                                        z-index: 12;
+                                        background-image: linear-gradient(to bottom, #a3a8a6, white);
+                                        width: 1349px;
+                                        height: 120px;
+                                        left: 0;
+                                        position: absolute;
+                                        display: block}
+                        
+/* PROJECTS PAGE - PRESETS --------------------------------------------------------------------------------------------------------------------------------------*/
+                       
+.projects-content{
+    width: 100%;
+    position: relative;
+    top: 10 0px;
+    height: 1600px;}
+
+    #my-projects{
+        display: block;
+        margin: 0;
+        width: 400px;
+        height: auto;
+        padding-top: 100px;}
+        
+        #project-title{
+            padding: 20px;
+            background-image: url('cover-career.jpg');
+            border-radius: 40px;
+            border: 3px solid gray;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 40px;
+            color: whitesmoke;
+            font-family: serif;
+            text-shadow: 7px 9px 7px rgb(22, 22, 22);
+            margin-top: 10px;}
+
+            #project-title:hover{
+                font-size: 43.7px;}
+                
+                #projects-links{
+                    padding-top: 100px;
+                    padding-left: 0%;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: left;
+                    font-size: 70px;
+                    color: whitesmoke;
+                    text-shadow: 7px 9px 7px rgb(22, 22, 22);}    
+
+                    #project-informations{
+                        text-align: left;
+                        padding-top: 40px;
+                        padding-left: 15px;
+                        font-size: 21px;
+                        color: rgb(238, 229, 229);
+                        text-shadow: 7px 9px 7px rgb(22, 22, 22);}
+
+                        .footer-space-projects{
+                            height: 530px;
+                            padding-bottom: 11px;}
+                        
+                            .footer-projects{
+                                z-index: 12;
+                                background-image: linear-gradient(to bottom, #a3a8a6, white);
+                                width: 1349px;
+                                height: 110px;
+                                left: 0;
+                                position: absolute;
+                                display: block}
+
