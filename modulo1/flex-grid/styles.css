@@ -1,0 +1,126 @@
+/*BODY & HEADER ------------------->*/
+*{
+    margin: 0;
+    padding: 0;}
+
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 50px 1fr 50px;}
+
+            header{
+                background-color: mediumvioletred;
+                display: grid;
+                grid-template-columns: 1fr 80px;
+                align-items: center;
+                padding: 0 20px;}
+
+                button{
+                    padding: 0 2px;}
+
+                    img{
+                        height: 20px;}
+
+                        .position{
+                            display: flex;
+                            gap: 15px;}
+
+/*MAIN CONTENT --------------------->*/
+
+main{
+    display: grid;
+    background-color: #fafafa;
+    grid-template-columns: 300px 1fr;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        background-color: #f2d0e0;}
+
+        nav a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 13px;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 21.4px;
+            margin-left: 50px;}
+
+            .menu-icons{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 20px;
+                margin-left: 20px;
+                gap: 20px;}
+
+                .icon-arrow{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                    margin-left: 260px;
+                    gap: 20px;}
+
+                    .cakes-catalog{
+                        display: grid;
+                        text-align: center;
+                        padding: 0 10px;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        width: 200px;}
+
+                        .catalog-model{
+                            background-color: white;
+                            box-shadow: 3px 2px 5px rgba(41, 41, 40, 0.562);
+                            margin: 15px 10px;
+                            width: 200px;}
+
+                            .cakes-catalog img{
+                                width: 200px;
+                                height: 120px;}
+
+                                .cakes-catalog p{
+                                    padding-top: 15px;
+                                    padding-bottom: 15px;
+                                    font-size: 13px;
+                                }
+
+
+
+                       
+
+
+
+                        
+
+
+                   
+            
+
+
+        
+
+/*FOOTER -------------------------->*/
+
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: mediumvioletred;
+    height: 50px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    footer h3{
+        font-size: 16px;}
+
+  
