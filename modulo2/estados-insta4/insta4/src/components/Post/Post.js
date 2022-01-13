@@ -52,7 +52,7 @@ class Post extends React.Component {
     console.log('Curtiu!')
     this.setState({
       curtido: true,
-      numeroCurtidas: this.state.numeroCurtidas + 1
+      numeroCurtidas: this.state.numeroCurtidas + 1,
     })
   }
 
