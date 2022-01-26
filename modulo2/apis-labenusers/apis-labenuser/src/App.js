@@ -1,6 +1,8 @@
 import React from 'react';
 import Register from './components/Register/Register';
 import Users from './components/Users/User';
+import UserInfo from './components/Users/UserInfo';
+
 
 export default class App extends React.Component {
   
@@ -17,7 +19,12 @@ export default class App extends React.Component {
         return <Register goToUsersPage={this.goToUsersPage}/>
       
       case "usersPage":
-        return <Users goToRegisterPage={this.goToRegisterPage}/>
+        return <Users 
+        goToRegisterPage={this.goToRegisterPage}
+        goToUsersPageInfo={this.goToUsersPageInfo}/>
+      
+      case "usersPageInfo":
+        return <UserInfo goToUsersPage={this.goToUsersPage}/>
       
       default:
         return <Register/>
@@ -31,6 +38,11 @@ export default class App extends React.Component {
   goToUsersPage = () => {
     this.setState({page: "usersPage"})
   }
+
+  goToUsersPageInfo = () => {
+    this.setState({page: "usersPageInfo"})
+  }
+
 
   render() {
     
