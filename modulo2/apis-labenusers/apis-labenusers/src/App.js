@@ -54,7 +54,7 @@ export default class App extends React.Component {
     axios.get(urlUser, headers)
     .then((res) => {
       this.setState({users:res.data})
-      /* console.log(res.data.result) */
+      console.log(res.data.result)
     })
     .catch((err) => {
       console.log(err.response)
@@ -65,11 +65,27 @@ export default class App extends React.Component {
     this.getAllUsers();
   }
 
+  deleteUser = (id) => {
+  axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, headers)
+  .then((res) => {
+    this.getAllUsers()
+  })
+  .catch((err) => {
+    console.log(err.data)
+  })
+  }
+
   render() {
       
     const registeredUsers = this.state.users.map((user) => {
-      return <li key={user.id}>{user.name}</li>
-    })
+      return (
+        <div key={user.id}>
+            <li>{user.name}</li>
+            <button onClick={() => this.deleteUser(user.id)}>Remover</button>
+        </div>
+        
+    )})
+
 
 
     return (
@@ -90,6 +106,7 @@ export default class App extends React.Component {
           <button onClick={this.registerUser}>Criar novo usuário</button>
           <div>
             {registeredUsers}
+
           </div>
       </div>
     )}
