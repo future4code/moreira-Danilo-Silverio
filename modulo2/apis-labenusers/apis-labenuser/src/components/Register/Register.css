@@ -1,0 +1,119 @@
+/* -----------------------------------------REGISTER PAGE--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.register-page{
+    height: 100vh;
+    background-image: url("../images/background-site.jpg")
+}
+
+
+/* --------------------------------------------HEADER--------------------------------------------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 50px;
+    height: 12vh;
+}
+
+header img{
+    height: 75px;
+}
+
+header button{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+header button:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+/* -----------------------------------------CREATE USER--------------------------------------------------- */
+.create-user{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 65vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #182127;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #101217;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.fieldset-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fieldset-header p{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+.create-user label{
+    margin-top: 15px;
+}
+
+.create-user input{
+    height: 35px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #1f2226;
+    background-color: #1f2226;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.register{
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #01e7f9;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.register:hover{
+    background-color: #84f2fa;
+}
+
+
+
