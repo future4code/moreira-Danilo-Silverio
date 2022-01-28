@@ -1,5 +1,7 @@
 import React from 'react';
-import HomePage from './components/HomePage';
+import HomePage from './pages/Home/HomePage';
+import RegisterAccount from './pages/Register/RegisterAccount';
+import RegisterAccountContinue from './pages/Register/RegisterAccountContinue';
 import CreatePlaylist from './components/CreatePlaylist';
 import AllPlaylists from './components/AllPlaylists';
 
@@ -28,8 +30,21 @@ export default class App extends React.Component {
     switch (this.state.page){
 
         case "homePage":
-            return <HomePage goToCreatePLaylist={this.goToCreatePLaylist}/>
+            return <HomePage goToRegisterPage={this.goToRegisterPage}/>
         
+        case "registerPage":
+            return <RegisterAccount
+            goToHomePage={this.goToHomePage}
+            goToRegisterPageContinue={this.goToRegisterPageContinue}
+            />
+
+        case "registerPageContinue":
+            return <RegisterAccountContinue
+            goToHomePage={this.goToHomePage}
+            goToRegisterPage={this.goToRegisterPage}
+            goToCreatePLaylist={this.goToCreatePLaylist}
+            />
+
         case "createPlaylistPage":
             return <CreatePlaylist
             goToHomePage={this.goToHomePage}
@@ -49,6 +64,14 @@ export default class App extends React.Component {
 
   goToHomePage = () => {
     this.setState({page: "homePage"})
+  }
+
+  goToRegisterPage = () => {
+    this.setState({page: "registerPage"})
+  }
+
+  goToRegisterPageContinue = () => {
+    this.setState({page: "registerPageContinue"})
   }
 
   goToCreatePLaylist = () => {
