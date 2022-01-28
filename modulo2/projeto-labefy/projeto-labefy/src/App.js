@@ -2,15 +2,8 @@ import React from 'react';
 import HomePage from './pages/Home/HomePage';
 import RegisterAccount from './pages/Register/RegisterAccount';
 import RegisterAccountContinue from './pages/Register/RegisterAccountContinue';
-import CreatePlaylist from './components/CreatePlaylist';
-import AllPlaylists from './components/AllPlaylists';
-
-
-
-
-
-
-
+import AllPlaylists from './components/allPlaylists';
+import PlaylistTracks from './pages/PlaylistTracks/PlaylistTracks';
 
 
 
@@ -19,7 +12,8 @@ export default class App extends React.Component {
   
   state = {
 
-    page: "homePage"
+    currentPage: "homePage",
+    clickedPlaylistUrl: ""
 
   }  
   
@@ -27,10 +21,13 @@ export default class App extends React.Component {
 
   changePages = () => {
 
-    switch (this.state.page){
+    switch (this.state.currentPage){
 
         case "homePage":
-            return <HomePage goToRegisterPage={this.goToRegisterPage}/>
+            return <HomePage 
+            goToRegisterPage={this.goToRegisterPage}
+            goToAllPlaylists={this.goToAllPlaylists}
+            />
         
         case "registerPage":
             return <RegisterAccount
@@ -42,44 +39,44 @@ export default class App extends React.Component {
             return <RegisterAccountContinue
             goToHomePage={this.goToHomePage}
             goToRegisterPage={this.goToRegisterPage}
-            goToCreatePLaylist={this.goToCreatePLaylist}
+            goToAllPlaylists={this.goToAllPlaylists}
             />
 
-        case "createPlaylistPage":
-            return <CreatePlaylist
+        case "allPlaylistsPage":
+            return <AllPlaylists
+            goToHomePage={this.goToHomePage}
+            goToAllPlaylists={this.goToAllPlaylists}
+            goToPlaylistTracks={this.goToPlaylistTracks}
+            />
+        case "playlistTracksPage":
+            return <PlaylistTracks url={this.state.clickedPlaylistUrl}
             goToHomePage={this.goToHomePage}
             goToAllPlaylists={this.goToAllPlaylists}
             />
-                
-        case "allPlaylistsPage":
-            return <AllPlaylists 
-            goToCreatePLaylist={this.goToCreatePLaylist}
-            goToHomePage={this.goToHomePage}
-            />
-        
+              
         default:
-            return <HomePage goToCreatePLaylist={this.goToCreatePLaylist}/>
+            return <HomePage goToAllPlaylists={this.goToAllPlaylists}/>
     }
   }
 
   goToHomePage = () => {
-    this.setState({page: "homePage"})
+    this.setState({currentPage: "homePage"})
   }
 
   goToRegisterPage = () => {
-    this.setState({page: "registerPage"})
+    this.setState({currentPage: "registerPage"})
   }
 
   goToRegisterPageContinue = () => {
-    this.setState({page: "registerPageContinue"})
-  }
-
-  goToCreatePLaylist = () => {
-    this.setState({page: "createPlaylistPage"})
+    this.setState({currentPage: "registerPageContinue"})
   }
 
   goToAllPlaylists = () => {
-    this.setState({page: "allPlaylistsPage"})
+    this.setState({currentPage: "allPlaylistsPage"})
+  }
+
+  goToPlaylistTracks = (url) => {
+    this.setState({currentPage: "playlistTracksPage", clickedPlaylistUrl: url})
   }
 
   render() {

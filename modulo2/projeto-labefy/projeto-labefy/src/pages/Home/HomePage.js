@@ -20,7 +20,7 @@ export default class HomePage extends React.Component {
           <img src={Labefy} alt="Logo Labefy"/>
           <div>
             <button className='header-subscribe' onClick={this.props.goToRegisterPage}>Subscribe</button>
-            <button className='header-login'>Login</button>
+            <button className='header-login' onClick={this.props.goToAllPlaylists}>Login</button>
           </div>
         </header>
         <div className='home-content'>

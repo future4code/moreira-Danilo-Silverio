@@ -41,7 +41,7 @@ export default class RegisterAccountContinue extends React.Component {
                 placeholder='Type your e-mail'
             />
             <p className='checkbox'>Quero receber informações e novidades do Labefy</p>
-            <button className='continue' onClick={this.props.goToCreatePLaylist}>Go to playlist</button>
+            <button className='continue' onClick={this.props.goToAllPlaylists}>Go to playlist</button>
           </fieldset>
         </div>
       </div>

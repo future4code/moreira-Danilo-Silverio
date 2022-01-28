@@ -1,0 +1,64 @@
+/* -----------------------------------------PLAYLIST PAGE--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-page{
+    height: 100vh;
+    background-image: url(../assets/background-site.jpg);
+}
+
+
+/* --------------------------------------------HEADER--------------------------------------------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 12vh;
+    background-color: transparent;
+}
+
+header img{
+    height: 60px;
+    margin-left: 40px;
+}
+
+.home{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    border: 1px solid white;
+    margin-right: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+header button:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+
+/* --------------------------------------------CREATE PLAYLIST DIV--------------------------------------------------- */
+
+.create-playlist{
+    display: flex;
+    align-items: center;
+    background-color: rgb(8, 10, 17);
+    border: 1px solid white;
+    width: 80%;
+    height: 80px;
+    margin-top: 3%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 50px;
+
+}

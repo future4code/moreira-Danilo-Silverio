@@ -134,8 +134,8 @@ header button{
     color: rgb(92, 92, 95);
 }
 
-span{
-    color: white;
+.subscribe-plan span{
+    color: rgb(255, 255, 255);
 }
 
 /* ------------------------------------------------HOME CONTENT IMAGE------------------------------------------------------ */
