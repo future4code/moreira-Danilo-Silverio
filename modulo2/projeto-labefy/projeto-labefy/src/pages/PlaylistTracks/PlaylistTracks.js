@@ -14,7 +14,7 @@ export default class PlaylistTracks extends React.Component {
   
     
     state = {
-
+        tracklist: [],
         name: "",
         artist: "",
         url: ""
@@ -29,7 +29,7 @@ export default class PlaylistTracks extends React.Component {
               url: this.state.url
         }
     
-        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`, body, headers)
+        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.tracklistid}/tracks`, body, headers)
         .then((res) => {
             alert(`${this.state.name} has been successfully added!`)
             this.setState({name: ""})

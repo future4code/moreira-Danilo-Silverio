@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './AllPlaylists.css';
 import Labefy from '../assets/labefy.png';
+import Playlist from '../assets/playlist.png';
 
 
 
@@ -43,6 +44,7 @@ export default class AllPlaylists extends React.Component {
     .then((res) => {
         alert(`Your playlist named ${this.state.playlistName} has been successfully created!`)
         this.setState({playlistName: ""})
+        this.getAllPlaylists();
     })
     .catch(() => {
         alert('Something is wrong! Try again')
@@ -83,9 +85,15 @@ export default class AllPlaylists extends React.Component {
     
     const myPlaylists = this.state.playlists.map((playlist) => {
       return (
-          <div className='playlist' key={playlist.id} onClick={() => this.props.goToPlaylistTracks(playlist.url)}>
-          <h2>{playlist.name}</h2>
-          <button onClick={() => this.deletePLaylist(playlist.id)}>X</button>
+          <div className='playlist' key={playlist.id}>
+          <div className='name-and-cover'>
+            <img className='playlist-cover' src={Playlist} alt="playlist cover" />
+            <h2>{playlist.name}</h2>
+          </div>
+          <div className='playlist-buttons'>
+            <button className='info' onClick={() => this.props.goToPlaylistTracks(playlist.url)}>...</button>
+            <button className='delete' onClick={() => this.deletePLaylist(playlist.id)}>X</button>
+          </div>
           </div>
       )
 
@@ -97,18 +105,20 @@ export default class AllPlaylists extends React.Component {
           <img src={Labefy} alt="Logo Labefy" />
           <button className='home' onClick={this.props.goToHomePage}>Home</button>
         </header>
-        <div className='create-playlist'>
-          <h1>Create Playlist</h1>
-          <input 
-              type="text"
-              placeholder='Name your playlist..'
-              value={this.state.playlistName}
-              onChange={this.onChangePLaylistName}
-          />
-          <button onClick={this.postPlaylist}>Criar</button>
-        </div>
-        <div>
-        {myPlaylists}
+        <div className='playlist-content'>
+          <div className='create-playlist'>
+            <h1>Create playlist</h1>
+            <input 
+                type="text"
+                placeholder='Type the name of your new playlist'
+                value={this.state.playlistName}
+                onChange={this.onChangePLaylistName}
+            />
+            <button className='add' onClick={this.postPlaylist}>Add</button>
+          </div>
+          <div className='playlist-list'>
+          {myPlaylists}
+          </div>
         </div>
       </div>
     )

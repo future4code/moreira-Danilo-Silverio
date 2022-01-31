@@ -16,7 +16,7 @@ export default class HomePage extends React.Component {
     
     return (
       <div className='home-page'>
-        <header>
+        <header className='header'>
           <img src={Labefy} alt="Logo Labefy"/>
           <div>
             <button className='header-subscribe' onClick={this.props.goToRegisterPage}>Subscribe</button>
