@@ -111,7 +111,7 @@ header button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70vw;
+    width: 80vw;
     margin-top: 5%;
     border: 1px solid rgba(209, 209, 214, 0.322);
     border-left: none;
@@ -139,6 +139,21 @@ header button:hover{
 .playlist-buttons{
     display: flex;
     gap: 20px;
+}
+
+.add-music{
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid rgb(32, 210, 241);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .info{
@@ -169,6 +184,12 @@ header button:hover{
     color: rgb(119, 9, 9);
     cursor: pointer;
 }
+
+.add-music:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+    color: rgb(32, 210, 241);
+}
+
 .info:hover{
     background-color: rgba(255, 255, 255, 0.452);
 }
@@ -176,4 +197,15 @@ header button:hover{
 .delete:hover{
     background-color: rgba(247, 16, 16, 0.452);
     color: rgba(255, 255, 255, 0.452);
+}
+
+
+/* --------------------------------------------ADD MUSIC--------------------------------------------------- */
+
+.add-musics-space{
+    position: absolute;
+    right: 20px;
+    width: 20vw;
+    height: 50vh;
+    background-color: white;
 }

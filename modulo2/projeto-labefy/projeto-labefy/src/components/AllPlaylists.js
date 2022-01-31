@@ -26,9 +26,15 @@ export default class AllPlaylists extends React.Component {
 
     playlistName: "",
     playlists: [],
+    trackName: "",
+    trackArtist: "",
+    trackUrl: ""
    
   }
+ 
   
+  /* ADD PLAYLIST------------------------------------------------------------------------- */
+
   onChangePLaylistName = (event) => {
 
     this.setState({playlistName: event.target.value})
@@ -53,6 +59,8 @@ export default class AllPlaylists extends React.Component {
 
   }
 
+  /* GET PLAYLIST------------------------------------------------------------------------- */
+
   componentDidMount() {
     this.getAllPlaylists();
 }
@@ -69,6 +77,8 @@ export default class AllPlaylists extends React.Component {
 
 }
 
+/* DELETE PLAYLIST------------------------------------------------------------------------- */
+
   deletePLaylist = (id) => {
     
     axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`,headers)
@@ -81,7 +91,51 @@ export default class AllPlaylists extends React.Component {
         alert('Something is wrong! Try again')
     })
 }
+
+/* ADD TRACK------------------------------------------------------------------------- */
   
+  onChangeTrackName = (event) => {
+
+  this.setState({trackName: event.target.value})
+
+  }
+
+  onChangeTrackArtist = (event) => {
+
+    this.setState({trackArtist: event.target.value})
+  
+  }
+
+  onChangeTrackUrl = (event) => {
+
+    this.setState({trackUrl: event.target.value})
+  
+  }
+
+
+  addTrackToPlaylist= (id) => {
+
+    const bodyTrack = {
+
+      name: this.state.trackName,
+      artist: this.state.trackArtist,
+      url: this.state.trackUrl
+    }
+
+    axios.post
+    (`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`, bodyTrack, headers)
+    .then((res) => {
+      alert(`The music called ${this.state.trackName} has been successfully added to the playlist!`)
+      this.setState({trackName: ""})
+      this.setState({trackArtist: ""})
+      this.setState({trackUrl: ""})
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+
+  }
+
   render() {
     
     const myPlaylists = this.state.playlists.map((playlist) => {
@@ -90,9 +144,10 @@ export default class AllPlaylists extends React.Component {
           <div className='name-and-cover'>
             <img className='playlist-cover' src={Playlist} alt="playlist cover" />
             <h2>{playlist.name}</h2>
-            <h3><StarRating/></h3>
+            <h4><StarRating/></h4>
           </div>
           <div className='playlist-buttons'>
+            <button className='add-music'>Add +</button>
             <button className='info' onClick={() => this.props.goToPlaylistTracks(playlist.url)}>...</button>
             <button className='delete' onClick={() => this.deletePLaylist(playlist.id)}>X</button>
           </div>
@@ -118,6 +173,27 @@ export default class AllPlaylists extends React.Component {
             />
             <button className='add' onClick={this.postPlaylist}>Add</button>
           </div>
+          {/* <div className='add-musics-space'>
+          <input 
+                type="text"
+                placeholder='Enter the music name'
+                value={this.state.trackName}
+                onChange={this.onChangeTrackName}
+            />
+            <input 
+                type="text"
+                placeholder='Enter the music artist'
+                value={this.state.trackArtist}
+                onChange={this.onChangeTrackArtist}
+            />
+            <input 
+                type="url"
+                placeholder='Enter the music link'
+                value={this.state.trackUrl}
+                onChange={this.onChangeTrackUrl}
+            />
+            <button onClick={this.addTrackToPlaylist}>Add</button>
+          </div> */}
           <div className='playlist-list'>
           {myPlaylists}
           </div>
