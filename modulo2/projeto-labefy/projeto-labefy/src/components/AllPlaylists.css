@@ -8,7 +8,8 @@
 
 .playlist-page{
     height: 100vh;
-    background-image: url(../assets/background-site.jpg);
+    background-image: url(../assets/background-home.jpg);
+    background-size: cover;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -118,7 +119,7 @@ header button:hover{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-image: linear-gradient(to bottom, #040505, #0f1316);
-    box-shadow: 5px 5px 50px rgba(0, 188, 245, 0.082);
+    box-shadow: 5px 5px 50px rgba(235, 235, 235, 0.082);
 }
 
 .name-and-cover{

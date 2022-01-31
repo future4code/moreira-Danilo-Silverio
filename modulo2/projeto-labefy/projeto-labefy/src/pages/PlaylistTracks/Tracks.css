@@ -1,0 +1,96 @@
+/* ------------------------------------------------HOME PAGE------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sarala&display=swap');
+
+
+.tracks-page{
+    height: 100vh;
+    background-image: url(../../assets/background-home.jpg);
+    background-size: cover;
+    
+}
+
+/* ------------------------------------------------HEADER------------------------------------------------------ */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 15vh;
+}
+
+header img{
+    height: 60px;
+}
+
+.back-to-playlists{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    margin-right: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    color: white;
+    
+}
+
+.back-to-playlists:hover{
+    background-color: transparent;
+    border: 2px solid rgb(47, 195, 240);
+    color:rgb(47, 195, 240);
+}
+
+
+/* ------------------------------------------------CONTENT------------------------------------------------------ */
+
+.add-tracks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 400px;
+    gap: 50px;
+    margin-left: 3%;
+    overflow-x: hidden;
+}
+
+.add-tracks input{
+    height: 50px;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(229, 229, 247);
+    color: white;
+    font-weight: 500px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-tracks button{
+    width: 80%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-add{
+    background-color: rgb(6, 215, 223); 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+.button-add:hover{
+    background-color: transparent;
+    color: rgb(6, 215, 223); ;
+    border: 2px solid rgb(6, 215, 223); 
+}

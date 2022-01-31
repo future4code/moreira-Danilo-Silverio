@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import StarRating from './StartRating';
 import './AllPlaylists.css';
 import Labefy from '../assets/labefy.png';
 import Playlist from '../assets/playlist.png';
@@ -89,6 +90,7 @@ export default class AllPlaylists extends React.Component {
           <div className='name-and-cover'>
             <img className='playlist-cover' src={Playlist} alt="playlist cover" />
             <h2>{playlist.name}</h2>
+            <h3><StarRating/></h3>
           </div>
           <div className='playlist-buttons'>
             <button className='info' onClick={() => this.props.goToPlaylistTracks(playlist.url)}>...</button>

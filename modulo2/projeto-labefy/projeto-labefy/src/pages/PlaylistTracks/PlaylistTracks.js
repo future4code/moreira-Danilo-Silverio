@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
+import Labefy from './../../assets/labefy.png'
+import "./Tracks.css"
 
 
 
@@ -12,76 +13,33 @@ const headers = {
 
 export default class PlaylistTracks extends React.Component {
   
-    
-    state = {
-        tracklist: [],
-        name: "",
-        artist: "",
-        url: ""
-
-    }
-
-    postTrackPlaylist = (id) => {
-      
-        const body = {
-              name: this.state.name,
-              artist: this.state.artist,
-              url: this.state.url
-        }
-    
-        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.tracklistid}/tracks`, body, headers)
-        .then((res) => {
-            alert(`${this.state.name} has been successfully added!`)
-            this.setState({name: ""})
-            this.setState({artist: ""})
-            this.setState({url: ""})
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-    
-      }
-
-      onChangeTrackName = (event) => {
-    
-        this.setState ({name: event.target.value})
-      }
-
-      onChangeTrackArtist = (event) => {
-    
-        this.setState ({artist: event.target.value})
-      }
-
-      onChangeTrackUrl = (event) => {
-    
-        this.setState ({url: event.target.value})
-      }
-  
     render() {
         
     
     
     return (
-        <div>
-            <input 
-                type="text" 
-                placeholder='Type the music name'
-                value={this.state.name}
-                onChange={this.onChangeTrackName}   
-            />
-            <input 
-                type="text" 
-                placeholder='Type the music artist'
-                value={this.state.artist}
-                onChange={this.onChangeTrackArtist}   
-            />
-            <input 
-                type="url" 
-                placeholder='Enter the music link'
-                value={this.state.url}
-                onChange={this.onChangeTrackUrl}   
-            />
-            <button onClick={this.postTrackPlaylist}>Add track</button>
+          <div className='tracks-page'>
+            <header className='header'>
+              <img src={Labefy} alt="Logo Labefy"/>
+              <div>
+                <button className='back-to-playlists' onClick={this.props.goToAllPlaylists}>Back to playlists</button>
+              </div>
+            </header>
+            <div className='add-tracks'>
+              <input 
+                    type="text" 
+                    placeholder='Type the music name'
+                />
+                <input 
+                    type="text" 
+                    placeholder='Type the music artist'
+                />
+                <input 
+                    type="url" 
+                    placeholder='Enter the music link'  
+                />
+                <button className='button-add'>Add</button>
+            </div>
         </div>
     )
   }
