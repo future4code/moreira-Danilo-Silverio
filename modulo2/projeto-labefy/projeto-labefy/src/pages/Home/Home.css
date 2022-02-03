@@ -1,0 +1,151 @@
+/* ------------------------------------------------HOME PAGE------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sarala&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    cursor: default;
+}
+
+.home-page{
+    height: 100vh;
+    background-image: url(../../assets/background-home.jpg);
+    background-size: cover;
+    
+}
+
+/* ------------------------------------------------HEADER------------------------------------------------------ */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 15vh;
+}
+
+header img{
+    height: 60px;
+}
+
+header button{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    margin-right: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.header-subscribe{
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.header-login{
+    color: white;
+    
+}
+
+.header-subscribe:hover{
+    color:#01e7f9;
+    border: 1px solid #01e7f9;
+    background-color: transparent;
+}
+
+.header-login:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+
+/* ------------------------------------------------HOME CONTENT TEXT------------------------------------------------------ */
+
+.home-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-text{
+    margin-left: 3%;
+}
+
+.our-motto{
+    font-family: 'Sarala', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(rgb(0, 165, 241), rgb(0, 222, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-title{
+    font-size: 50px;
+    margin-top: 50px;
+    color: white;
+}
+
+.quick-description{
+    font-family: 'Sarala', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+    
+}
+
+.subscribe{
+    margin-top: 60px;
+    height: 50px;
+    width: 320px;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: rgb(23, 25, 29);
+    background-color: #01e7f9;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.subscribe:hover{
+    border: 2px solid #01e7f9;
+    background-color: transparent;
+    color: #01e7f9;
+}
+
+.subscribe-plan{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(92, 92, 95);
+}
+
+.subscribe-plan span{
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------------HOME CONTENT IMAGE------------------------------------------------------ */
+
+.app-image{
+    position: absolute;
+    bottom: -90px;
+    right: 150px;
+}
+
+.app-image img{
+    width: 350px;
+    height: 600px;
+}

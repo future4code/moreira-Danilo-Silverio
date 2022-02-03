@@ -1,0 +1,211 @@
+/* -----------------------------------------PLAYLIST PAGE--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-page{
+    height: 100vh;
+    background-image: url(../assets/background-home.jpg);
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* --------------------------------------------HEADER--------------------------------------------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 12vh;
+}
+
+header img{
+    height: 60px;
+    margin-left: 40px;
+}
+
+.home{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    border: 1px solid white;
+    margin-right: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+header button:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+
+/* --------------------------------------------CREATE PLAYLIST DIV--------------------------------------------------- */
+
+.create-playlist{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    height: 80px;
+    padding: 10px 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-top: 2px solid #0a0a0a;
+    border-bottom: 2px solid #01e7f9;
+    background-image:linear-gradient(to bottom, #01aaf9, #01e7f9);
+}
+
+.create-playlist h1{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(217, 220, 224);
+    background-image: linear-gradient(to bottom,#0a1527, #030b11);
+}
+
+.create-playlist input{
+    height: 50px;
+    width: 800px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 50px;
+    border: 1px solid #1f2226;
+    background-color: #1f2226;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: auto;
+}
+
+.add{
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    background-image: linear-gradient(to bottom,#0a1527, #030b11);
+    cursor: pointer;
+
+}
+
+.add:hover{
+    background-image: linear-gradient(to bottom,#01e8f963, #0196f934);
+}
+
+.playlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin-top: 5%;
+    border: 1px solid rgba(209, 209, 214, 0.322);
+    border-left: none;
+    padding: 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: linear-gradient(to bottom, #040505, #0f1316);
+    box-shadow: 5px 5px 50px rgba(235, 235, 235, 0.082);
+}
+
+.name-and-cover{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: white;
+}
+.playlist-cover{
+    width: 80px;
+    border-radius: 20px;
+}
+
+.playlist-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.add-music{
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid rgb(32, 210, 241);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info{
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete{
+    width: 80px;
+    height: 40px;
+    padding: 10;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px solid rgba(112, 5, 5, 0.74);
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: rgb(119, 9, 9);
+    cursor: pointer;
+}
+
+.add-music:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+    color: rgb(32, 210, 241);
+}
+
+.info:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+}
+
+.delete:hover{
+    background-color: rgba(247, 16, 16, 0.452);
+    color: rgba(255, 255, 255, 0.452);
+}
+
+
+/* --------------------------------------------ADD MUSIC--------------------------------------------------- */
+
+.add-musics-space{
+    position: absolute;
+    right: 20px;
+    width: 20vw;
+    height: 50vh;
+    background-color: white;
+}
