@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tela-aplicativo{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background-color: aquamarine;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid blue;
+    
+}
+
+.icone-match{
+    height: 30px;
+}
+
+.rodape{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
