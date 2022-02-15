@@ -1,10 +1,10 @@
 import React from "react";
 
-export const TripDetailsPage = () => {
+export const ErrorPage = () => {
 
     return (
         <div>
-            <p>TripDetailsPage</p>
+            <p>404 ErrorPage</p>
         </div>
     )
 
