@@ -1,9 +1,9 @@
 import { AdminHomePage } from "./pages/AdminHomePage";
 import { ApplicationFormPage } from "./pages/ApplicationFormPage";
 import { CreateTripPage } from "./pages/CreateTripPage";
-import { HomePage } from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage/HomePage";
 import { ListTripsPage } from "./pages/ListTripsPage";
-import { LoginPage } from "./pages/LoginPage";
+import { LoginPage } from "./pages/Login/LoginPage";
 import { TripDetailsPage } from "./pages/TripDetailsPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
