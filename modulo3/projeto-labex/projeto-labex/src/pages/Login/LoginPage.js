@@ -58,32 +58,34 @@ export const LoginPage = () => {
     return (
         <div className="login-page-container">
             <header className="login-page-header">
-                <img className="logo" src={Labex} alt="Site logo" />
+                <img className="logo" onClick={goToHomePage} src={Labex} alt="Site logo" />
                 <button className="button-go-back-to-home" onClick={goToHomePage}>Home</button>
             </header>
             <div>
                 <fieldset className="fieldset-login">
-                    <div className="fieldset-header">
-                        <h1>Log in</h1>
-                        <p className="our-motto">The sky is no longer the limit. Join us on this unique experience</p>
-                    </div>
-                    <div className="user-info">
-                        <label>E-mail</label>
-                        <input 
-                            type="email" 
-                            placeholder="Type your e-mail"
-                            value={email}
-                            onChange={onChangeEmail}
-                        />
-                        <label>Password</label>
-                        <input 
-                            type="password" 
-                            placeholder="Type your password"
-                            value={password}
-                            onChange={onChangePassword}
-                        />
-                        <button onClick={submitLogin}>Continue</button>
-                    </div>
+                        <div className="fieldset-header">
+                            <h1>Log in</h1>
+                            <p className="our-motto">The sky is no longer the limit. Join us on this unique experience</p>
+                        </div>
+                        <div className="user-info">
+                            <label forHtml="email">E-mail</label>
+                            <input 
+                                type="email" 
+                                id="email"
+                                required
+                                placeholder="Type your e-mail"
+                                value={email}
+                                onChange={onChangeEmail}
+                            />
+                            <label>Password</label>
+                            <input 
+                                type="password" 
+                                placeholder="Type your password"
+                                value={password}
+                                onChange={onChangePassword}
+                            />
+                            <button onClick={submitLogin}>Continue</button>
+                        </div>
                 </fieldset>
             </div>
         </div>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sarala&display=swap');
+
+/*---------------------------------------------LIST TRIPS PAGE---------------------------------------------------------------- */
+.page-container{
+    display: grid;
+    background-image: url("../../assets/background-trips.jpg");
+}
+
+/*---------------------------------------------HEADER---------------------------------------------------------------- */
+
+.list-trip-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 8vh;
+    background-image: url("../../assets/background.jpg");
+}
+/*---------------------------------------------listOfTravels---------------------------------------------------------------- */
+
+.trips-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.trip-container{
+    width: 550px;
+    height: 150px;
+    margin: 3% 0 3% 3%;
+    padding: 40px;
+    border: 1px solid #7b3fd0;
+    border-radius: 10px;
+    background-color: #0a0911;
+    cursor: default;
+    transition: all 0.4s ease;
+}
+
+.trip-container:hover{
+    box-shadow: 1px 1px 30px rgb(5, 5, 5);
+    background-color: #988dcee3;
+    cursor: pointer;
+}
+
+.card-title{
+    display: flex;
+    align-items: center;
+}
+
+.card-title h1{
+    font-size: 20px;
+    color: #7b3fd0;
+    margin-left: 10px;
+}
+
+.card-title p{
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 10px;
+
+}
+
+.card-description{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.card-description h2{
+    font-size: 20px;
+    color: #7b3fd0;
+}
+
+.card-description p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+
+.trip-info{
+    background-color: #7b3fd0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.card-info h3{
+    font-size: 15px;
+    color: #2a1646;
+}
+
+.card-info p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+
