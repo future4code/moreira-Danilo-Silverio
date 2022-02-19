@@ -6,15 +6,14 @@ import { useState, useEffect } from "react";
 import "./ListTripsAdmin.css"
 
 
-
+const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/:danilo-silverio-moreira/trips"
 
 export const AdminHomePage = () => {
 
-
     const [travels, setTravels] = useState([]);
 
-    useEffect(()=> {
-        const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/:danilo-silverio-moreira/trips"
+
+    const getTrips = () => {
         axios.get(url)
         .then(res => {
           setTravels(res.data.trips)
@@ -22,15 +21,15 @@ export const AdminHomePage = () => {
         .catch(error => {
             console.log(error.data);
         })
-    })
+    }
+    useEffect(() => {getTrips()}, [url])
 
     const deleteTrip = (id) => {
         const headers = { auth: localStorage.getItem("token")}
             
         axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/:danilo-silverio-moreira/trips/:${id}`, headers)
         .then((res)=> {
-            setTravels(res.data)
-            alert(`Your trip called ${travels.name} has been successfully created!`)
+            getTrips("")
         })
         .catch((error)=> {
             console.log(error.response)
@@ -56,35 +55,35 @@ export const AdminHomePage = () => {
         navigate("/admin/trips/create")
     }
     
-    const listOfTravels = travels.map((itens) => {
+    const listOfTravels = travels.map((trip) => {
         return (
-            <div key={itens.id}>
+            <div key={trip.id}>
                 <div className="admin-trip-container">
                     <div className="admin-card-title">
                         <h1>Name:</h1>
-                        <p>{itens.name}</p>
+                        <p>{trip.name}</p>
                     </div>
                     <div className="admin-card-description">
                         <h2>Description:</h2>
-                        <p>{itens.description}.</p>
+                        <p>{trip.description}.</p>
                     </div>
                     <div className="admin-trip-info">
                         <div className="admin-card-info">
                             <h3>🪐 Planet:</h3>
-                            <p>{itens.planet}</p>
+                            <p>{trip.planet}</p>
                         </div>
                         <div className="admin-card-info">
                             <h3>🕒 Duration:</h3>
-                            <p>{itens.durationInDays} days</p>    
+                            <p>{trip.durationInDays} days</p>    
                         </div>
                         <div className="admin-card-info">
                             <h3>📅 Date:</h3>
-                            <p>{itens.date}</p>
+                            <p>{trip.date}</p>
                         </div>
                     </div>
                     <div className="go-to-details" >
                         <button type="button" onClick={goToTripDetails}> ➕ See more</button>
-                        <button type="button" onClick={deleteTrip}> 🗑 Delete</button>
+                        <button type="button" onClick={() =>{deleteTrip(trip.id)}}> 🗑 Delete</button>
                     </div>     
                 </div>
             </div>

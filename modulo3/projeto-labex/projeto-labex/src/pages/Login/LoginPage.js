@@ -68,7 +68,7 @@ export const LoginPage = () => {
                             <p className="our-motto">The sky is no longer the limit. Join us on this unique experience</p>
                         </div>
                         <div className="user-info">
-                            <label forHtml="email">E-mail</label>
+                            <label forhtml="email">E-mail</label>
                             <input 
                                 type="email" 
                                 id="email"

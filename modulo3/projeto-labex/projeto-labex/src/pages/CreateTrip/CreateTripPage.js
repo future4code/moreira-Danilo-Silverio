@@ -39,6 +39,7 @@ export const CreateTripPage = () => {
         axios.post(url, body, headers)
         .then(res => {
             console.log(res.data)
+            
           /* setTripName("res")
           setTripPlanet("")
           setTripDate("")
