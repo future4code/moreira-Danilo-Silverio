@@ -1,5 +1,5 @@
 import { AllRoutes } from "./routes/Routes";
-
+import "./App.css"
 
 
 
@@ -11,7 +11,7 @@ export default function App() {
   
 
   return (
-    <div>
+    <div className="app">
       <AllRoutes/>
     </div>
   );
