@@ -1,0 +1,126 @@
+/*-----------------------------------------------------LOGIN PAGE----------------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,900&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sarala&display=swap');
+
+.login-page-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/background-login2.jpg");
+    background-size: cover;
+}
+
+/*-----------------------------------------------------HEADER----------------------------------------------------------------------------------------------- */
+
+.login-page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 8vh;
+}
+
+.logo{
+    height: 90px;
+    cursor: pointer;
+}
+
+.button-go-back-to-home{
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #7b3ed0;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Sarala', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.button-go-back-to-home:hover{
+    background-color: rgba(246, 247, 248, 0.651);
+}
+
+/*-----------------------------------------------------FIELDSET----------------------------------------------------------------------------------------------- */
+
+.fieldset-login{
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 65vh;
+    border: 1px solid #7b3ed0;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #101217;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 3%;
+    margin-left: 2%;
+    
+}
+
+.fieldset-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fieldset-header h1{
+    font-size: 35px;
+}
+
+.our-motto{
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info label{
+    font-size: 17px;
+    margin-top: 16px;
+}
+
+.user-info input{
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #1f2226;
+    background-color: #1f2226;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 7px;
+    cursor: auto;
+}
+
+.user-info button{
+    width: 50%;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #6904a9, #9f38df);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.user-info button:hover{
+    opacity: 0.7;
+    box-shadow: 1px 1px 8px rgba(201, 200, 200, 0.384);
+    
+}
