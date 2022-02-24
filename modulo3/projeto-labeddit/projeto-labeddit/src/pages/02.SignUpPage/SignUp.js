@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { SignUpContainer, Fieldset,TextField, FieldsetDescription, FieldsetTittle, Terms, SignupButton, LabeBot, Labe, BackButton } from "./SignUpStyled";
 import LabedditBot from "../../assets/labeddit.png"
 import Labeddit from "../../assets/logo.png"
+import { useState } from "react";
+import axios from "axios";
+import { baseUrl } from "../../constants/Url";
+import { useEffect } from "react";
+import { goToFeedPage } from "../../routes/Coordinator";
 
 
 
@@ -10,17 +15,62 @@ import Labeddit from "../../assets/logo.png"
 
 
 export const SignUpPage = () => {
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        if (token){
+            goToFeedPage(navigate)
+        }
+    })
     
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    const onChangeUsername = (event) => {
+        setUsername(event.target.value)
+    };
+
+    const onChangeEmail = (event) => {
+        setEmail(event.target.value)
+    };
+
+    const onChangePassword = (event) => {
+        setPassword(event.target.value)
+    };
+
+    const onSubmitSignup = () => {
+        console.log(username, email, password)
+
+        const body = {
+            username: username,
+            email: email,
+            password: password
+        }
+
+        axios.post(`${baseUrl}/users/signup`, body)
+            .then((response) => {
+                localStorage.setItem("username", username)
+                localStorage.setItem("email", email)
+                localStorage.setItem("token", response.data.token)
+                alert(`Welcome ${username}! Your account has been successfully created`)
+                setUsername("")
+                setEmail("")
+                setPassword("")
+                navigate("/")
+            })
+            .catch((error) => {
+                console.log(error.response.data.message)
+                alert("Ops, sorry! Try to put a diferent username/email!")
+            })
+    };
 
     const navigate = useNavigate()
     
-    const feedButton = () => {
-        navigate("/labeddit/feed")
-    }
-
     const homeButton = () => {
         navigate("/")
-    }
+    };
 
 
 
@@ -36,18 +86,28 @@ export const SignUpPage = () => {
                     <TextField
                         type="text"
                         placeholder="Username"
+                        required
+                        value={username}
+                        onChange={onChangeUsername}
+                        title="Your username must have between 6 and 10 characters."
                     />
                     <TextField
                         type="email"
                         placeholder="E-mail"
+                        required
+                        value={email}
+                        onChange={onChangeEmail}
                     />
                     <TextField
                         type="password"
                         placeholder="Password"
+                        required
+                        value={password}
+                        onChange={onChangePassword}
                     />
                 </form>
                 <Terms>By clicking Sign Up, you agree to our <span>Terms</span>, <span>Data Policy</span> and <span>Cookies Policy</span>.</Terms>
-                <SignupButton type="button" onClick={feedButton}>Sign Up</SignupButton>
+                <SignupButton type="button" onClick={onSubmitSignup}>Sign Up</SignupButton>
             </Fieldset>
             
         </SignUpContainer>

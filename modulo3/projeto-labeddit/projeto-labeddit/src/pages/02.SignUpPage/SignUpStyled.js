@@ -138,7 +138,7 @@ export const TextField = styled.input`
     padding-left: 10px;
     border-radius: 7px;
     background-color: white;
-    color: white;
+    color: black;
     font-weight: 500;
 `
 
