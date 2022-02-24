@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+/*----------------------------------------------LOGO LABEDDIT------------------------------------------------------------------- */
 
 export const LabeBot = styled.img`
     width: 3%;
@@ -44,7 +45,7 @@ export const Labe = styled.img`
         }
     }
 `
-
+/*----------------------------------------------BUTTON HOME------------------------------------------------------------------- */
 export const BackButton = styled.button`
     position: absolute;
     top: 2%;
@@ -78,7 +79,7 @@ export const BackButton = styled.button`
         }
     }
 `
-
+/*----------------------------------------------SIGN UP------------------------------------------------------------------- */
 export const SignUpContainer = styled.div`
     width: 100vw;
     height: 100vh;

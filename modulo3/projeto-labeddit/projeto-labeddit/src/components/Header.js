@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Head, LabedditLogo, Profile, SearchOnLabeddit, LabedBot } from "./HeaderStyle";
-import Logo from "../assets/logoFeed.png"
+import { Head, LabedditLogo, Profile, SearchOnLabeddit, LabedBot, LogoutIcon, LogoutButton, User } from "./HeaderStyle";
+import Logo from "../assets/logo.png"
+import Logout from "../assets/logout.png"
 import LabeBot from "../assets/labedbot.png"
 
 
@@ -11,10 +12,6 @@ export const Header = () => {
     return(
         <Head>
             <LabedditLogo src={Logo} alt="Labeddit logo" />
-            <SearchOnLabeddit 
-                type="text"
-                placeholder=" 🔍 search on labeddit"
-            />
             <div>
             
             <SearchOnLabeddit 
@@ -23,12 +20,16 @@ export const Header = () => {
             />
             </div>
             <Profile>
-                <LabedBot src={LabeBot} alt="Avatar profile" />
-                <h1>Hi, </h1>
-                <p>@{user}</p>
+                <User>
+                    <LabedBot src={LabeBot} alt="Avatar profile" />
+                    <h1>Hi, </h1>
+                    <p>@{user}</p>
+                </User>
+                <LogoutButton>
+                    <LogoutIcon src={Logout} alt="Logout Icon" />
+                    <p>Logout</p>
+                </LogoutButton>
             </Profile>
-                <button>Logout</button>
-            
         </Head>
     )
 };

@@ -41,8 +41,7 @@ export const SignUpPage = () => {
     };
 
     const onSubmitSignup = () => {
-        console.log(username, email, password)
-
+        
         const body = {
             username: username,
             email: email,
@@ -61,8 +60,7 @@ export const SignUpPage = () => {
                 navigate("/")
             })
             .catch((error) => {
-                console.log(error.response.data.message)
-                alert("Ops, sorry! Try to put a diferent username/email!")
+                alert(error.response.data)
             })
     };
 
