@@ -3,13 +3,20 @@ import styled from "styled-components";
 
 
 /*----------------------------------------------FEED PAGE------------------------------------------------------------------- */
-export const FeedPageContainer = styled.div`
+export const PageContainer = styled.div`
     background-color: #242b35;
 `
 export const FeedContent = styled.div`
     display: grid;
     grid-template-columns:10% 1fr 10%;
     background-color: #242b35;
+
+    @media screen and (max-width: 700px) {
+        &{
+            grid-template-columns: 1fr;
+        }
+
+    }
 
 `
 
@@ -18,7 +25,13 @@ export const FeedContent = styled.div`
 export const FirstColumn = styled.div`
    background-color: #242b35;
    margin-top: 5vh;
-   
+ 
+   @media screen and (max-width: 700px) {
+        &{
+            display: none;
+        }
+
+    }
 `
 
 /*----------------------------------------------MAIN COLUMN------------------------------------------------------------------- */
@@ -30,6 +43,12 @@ export const MainColumn = styled.div`
     margin-top: 5vh;
     background-color: #242b35;
     height: 1000vh;
+    
+    @media screen and (max-width: 700px) {
+        &{
+            margin-top: 13vh;
+        }
+    }
 `
 export const CreatePost = styled.div`
     display: flex;
@@ -67,14 +86,27 @@ export const CreatePost = styled.div`
                 cursor: pointer;
                 background-color: #0ab70a;
             }
-            
         }
+
+        @media screen and (max-width: 700px) {
+        &{
+            width: 95%;
+        }
+        button{
+            width: 20%;
+        }
+    }
     
 `
 export const Feed = styled.div`
     margin-top: 3%;
     width: 70%;
     background-color: #242b35;
+    @media screen and (max-width: 700px) {
+        &{
+            width: 95%;
+        }
+    }
 `
 
 export const Labebott = styled.img`
@@ -94,6 +126,8 @@ export const PostContainer = styled.div`
     margin-bottom: 3%;
     background-color: whitesmoke;
     border-radius: 8px;
+    border: 1px solid whitesmoke;
+    transition: all 0.2s ease;
     div{
         padding: 1%;
     }
@@ -102,6 +136,11 @@ export const PostContainer = styled.div`
         border-radius: 100px;
         padding: 0.5% 0.5% 0 0.5%;
         width: 6%;
+    }
+    :hover{
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 40px black;
     }
 `
 export const PostHeader = styled.div`
@@ -121,6 +160,12 @@ export const PostInfo = styled.p`
     color: #a6a9aa;
     font-size: 70%;
     margin-left: 1%;
+    @media screen and (max-width: 700px) {
+        &{
+            width: 95%;
+            font-size: 60%;
+        }
+    }
 `
 export const PostDate = styled.p`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -128,6 +173,13 @@ export const PostDate = styled.p`
     color: #a6a9aa;
     font-size: 70%;
     margin-left: 1%;
+    @media screen and (max-width: 700px) {
+        &{
+            margin-left: 0;
+            width: 95%;
+            font-size: 42%;
+        }
+    }
 `
 export const PostContent = styled.div`
     margin-left: 1%;
@@ -135,6 +187,11 @@ export const PostContent = styled.div`
 
 export const PostTitle = styled.h1`
     font-family: 'Roboto', sans-serif;
+    @media screen and (max-width: 700px) {
+        &{
+            font-size: 90%;
+        }
+    }
 `
 
 export const PostBody = styled.p`
@@ -144,14 +201,32 @@ export const PostBody = styled.p`
     padding: 3%;
     border-radius: 20px;
     background-color: #d2dae1;
+    @media screen and (max-width: 700px) {
+        &{
+            font-size: 90%;
+        }
+    }
 `
 
 export const PostFooter = styled.div`
-    margin-left: 1%;
     display: flex;
+    margin: 0 1%;
+    align-items: center;
     justify-content: space-between;
     button{
         bottom: 0;
+        padding: 0.5rem 0.5rem;
+        background-color: transparent;
+        border-radius: 8px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: gray;
+    }
+    button:hover{
+        background-color: #c0cad8;
+        cursor: pointer; 
+
     }
 `
 
@@ -160,4 +235,11 @@ export const PostFooter = styled.div`
 export const ThirdColumn = styled.div`
     background-color: #242b35;
     margin-top: 5vh;
+
+    @media screen and (max-width: 700px) {
+        &{
+            display: none;
+        }
+
+    }
 `

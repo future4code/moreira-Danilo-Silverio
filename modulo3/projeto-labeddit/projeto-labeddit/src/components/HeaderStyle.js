@@ -16,6 +16,7 @@ export const Head = styled.header`
 export const LabedditLogo = styled.img`
     width: 14%;
     margin-left: 2%;
+    cursor: pointer;
     
     @media screen and (max-width: 700px) {
         &{
@@ -56,7 +57,7 @@ export const LabedBot = styled.img`
     @media screen and (max-width: 700px) {
         &{
             width: 80%;
-            margin-left: 160%;
+            margin-left: 200%;
         }
     }
 
@@ -106,10 +107,11 @@ export const Profile = styled.div`
                 margin-left: 2%;
             }
             h1{
-                font-size: 80%; 
+                font-size: 80%;
+                 
             }
             p{
-                font-size: 60%;
+                font-size: 70%;
                 margin-left: 0.3rem;
             }
         }
@@ -136,12 +138,12 @@ export const LogoutIcon = styled.img`
     width: 20%;
     @media screen and (max-width: 700px) {
         &{
-            width: 70%;
+            width: 80%;
         }
     }
     @media (min-width: 700px) and (max-width: 1024px) {
         &{
-            width: 40%;    
+            width: 60%;    
         }
     }       
 `
