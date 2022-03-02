@@ -51,7 +51,6 @@ export const SignUpPage = () => {
         axios.post(`${baseUrl}/users/signup`, body)
             .then((response) => {
                 localStorage.setItem("username", username)
-                localStorage.setItem("email", email)
                 localStorage.setItem("token", response.data.token)
                 alert(`Welcome ${username}! Your account has been successfully created`)
                 setUsername("")

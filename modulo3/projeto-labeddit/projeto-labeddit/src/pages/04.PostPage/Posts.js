@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { goToLoginPage } from "../../routes/Coordinator";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header";
-import { PageContainer } from "./PostStyle";
+import { PostPageContainer } from "./PostStyle";
+
 
 
 
@@ -22,11 +23,10 @@ export const PostsPage = () => {
         }
     }, [navigate])
 
-
     return(
-        <PageContainer>
+        <PostPageContainer>
             <Header/>
                 Posts
-        </PageContainer>
+        </PostPageContainer>
     )
 }

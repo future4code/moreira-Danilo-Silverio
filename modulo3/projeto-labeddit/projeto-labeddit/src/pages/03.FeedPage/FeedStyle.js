@@ -1,30 +1,30 @@
 import styled from "styled-components";
 
 
-
 /*----------------------------------------------FEED PAGE------------------------------------------------------------------- */
-export const PageContainer = styled.div`
+export const FeedPageContainer = styled.div`
     background-color: #242b35;
+
 `
 export const FeedContent = styled.div`
     display: grid;
-    grid-template-columns:10% 1fr 10%;
+    grid-template-columns: 9vw 80vw 5vw;
     background-color: #242b35;
 
     @media screen and (max-width: 700px) {
         &{
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
         }
 
     }
 
 `
-
 /*----------------------------------------------FIRST COLUMN------------------------------------------------------------------- */
 
 export const FirstColumn = styled.div`
    background-color: #242b35;
-   margin-top: 5vh;
+   margin-top: 8vh;
  
    @media screen and (max-width: 700px) {
         &{
@@ -40,13 +40,12 @@ export const MainColumn = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 4vh;
     background-color: #242b35;
-    height: 1000vh;
     
     @media screen and (max-width: 700px) {
         &{
-            margin-top: 13vh;
+            margin-top: 5vh;
         }
     }
 `
@@ -91,6 +90,7 @@ export const CreatePost = styled.div`
         @media screen and (max-width: 700px) {
         &{
             width: 95%;
+            margin-bottom: 8%;
         }
         button{
             width: 20%;
@@ -99,8 +99,10 @@ export const CreatePost = styled.div`
     
 `
 export const Feed = styled.div`
-    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
     width: 70%;
+    margin-top: 3%;
     background-color: #242b35;
     @media screen and (max-width: 700px) {
         &{
@@ -122,7 +124,7 @@ export const PostContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 12%;
+    height: fit-content;
     margin-bottom: 3%;
     background-color: whitesmoke;
     border-radius: 8px;
@@ -141,6 +143,12 @@ export const PostContainer = styled.div`
         cursor: pointer;
         border: 1px solid black;
         box-shadow: 1px 1px 40px black;
+    }
+
+    @media screen and (max-width: 700px) {
+        &{
+            margin-bottom: 8%;
+        }
     }
 `
 export const PostHeader = styled.div`
@@ -187,6 +195,7 @@ export const PostContent = styled.div`
 
 export const PostTitle = styled.h1`
     font-family: 'Roboto', sans-serif;
+    overflow-wrap: break-word;
     @media screen and (max-width: 700px) {
         &{
             font-size: 90%;
@@ -201,6 +210,7 @@ export const PostBody = styled.p`
     padding: 3%;
     border-radius: 20px;
     background-color: #d2dae1;
+    overflow-wrap: break-word;
     @media screen and (max-width: 700px) {
         &{
             font-size: 90%;
@@ -234,7 +244,7 @@ export const PostFooter = styled.div`
 
 export const ThirdColumn = styled.div`
     background-color: #242b35;
-    margin-top: 5vh;
+    margin-top: 8vh;
 
     @media screen and (max-width: 700px) {
         &{

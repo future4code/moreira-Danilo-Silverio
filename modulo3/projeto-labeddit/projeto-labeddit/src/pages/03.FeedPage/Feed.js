@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import { baseUrl } from "../../constants/Url";
 import { Header } from "../../components/Header";
-import { CreatePost, Feed, FeedContent, PageContainer, FirstColumn, Labebott, MainColumn, PostContainer, PostInfo, ThirdColumn, UserNick, PostDate, PostTitle, PostContent, PostHeader, PostBody, PostFooter } from "./FeedStyle";
+import { CreatePost, Feed, FeedContent, FeedPageContainer, FirstColumn, Labebott, MainColumn, PostContainer, PostInfo, ThirdColumn, UserNick, PostDate, PostTitle, PostContent, PostHeader, PostBody, PostFooter } from "./FeedStyle";
 import LabeBot from "../../assets/labedbot.png"
 import UserPostBot from "../../assets/userPostBot.png"
+import { createPost, goToPostDetails } from "../../routes/Coordinator";
 
 
 
@@ -24,13 +25,17 @@ export const FeedPage = () => {
     const getPosts = useRequestData([], `${baseUrl}/posts`)
     console.log(getPosts)
 
-    const goToThePost = () => {
-        navigate("/labeddit/posts")
+    const onClickPostCard = (id) => {
+        goToPostDetails(navigate, id)
+    }
+
+    const onClickCreatePost = () => {
+        createPost(navigate)
     }
 
     const feedPosts = getPosts.map((post) => {
         return (
-            <PostContainer key={post.id} onClick={goToThePost}>
+            <PostContainer key={post.id} onClick={() => onClickPostCard(post.id)}>
                 <PostHeader>
                     <img src={UserPostBot} alt="User post bot" />
                     <UserNick><strong>r/{post.username}</strong></UserNick>
@@ -43,18 +48,18 @@ export const FeedPage = () => {
                 </PostContent>
                 <PostFooter>
                     <button type="button">Vote</button>
-                    <button type="button" onClick={goToThePost}> 💬 Comments</button>
+                    <button type="button" onClick={() => onClickPostCard(post.id)}> 💬 Comments</button>
                 </PostFooter>
             </PostContainer>
         )
     })
 
     return(
-        <PageContainer>
+        <FeedPageContainer>
             <Header/>
             <FeedContent>
                 <FirstColumn>
-                    Oi
+                    
                 </FirstColumn>
                 <MainColumn>
                     <CreatePost>
@@ -62,17 +67,18 @@ export const FeedPage = () => {
                         <input 
                             type="text"
                             placeholder="Post"
+                            onClick={onClickCreatePost}
                         />
-                        <button>Post</button>
+                        <button onClick={onClickCreatePost}>Post</button>
                     </CreatePost>
                     <Feed>
                         {feedPosts}
                     </Feed>
                 </MainColumn>
                 <ThirdColumn>
-                    Ola
+                    
                 </ThirdColumn>
             </FeedContent>
-        </PageContainer>
+        </FeedPageContainer>
     )
 }
