@@ -1,0 +1,12 @@
+{
+  "name": "aula-introducao-ao-typescript",
+  "version": "1.0.0",
+  "description": "aula-introducao-ao-typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./build/index.js"
+  },
+  "author": "moreira-Danilo-Silverio",
+  "license": "ISC"
+}
