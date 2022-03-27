@@ -1,0 +1,12 @@
+{
+  "name": "aula-node-e-package-json",
+  "version": "1.0.0",
+  "description": "aula-node-e-package-json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "moreira-Danilo-Silverio",
+  "license": "ISC"
+}
