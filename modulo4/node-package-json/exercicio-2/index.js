@@ -1,17 +1,25 @@
 // EXERCÍCIO 2 -------------------------------------------------------------------------------------------->
 
-const firstNumber = Number(process.argv[2]);
-const secondNumber = Number(process.argv[3]);
+const operator = process.argv[2];
 
-const result = (a) => {
-    switch(mathOperation){
-        case "add":
-            return firstNumber + secondNumber
-            break;
-        case "subt":
-            //seu código aqui
-            break;
-}
+const firstNum = Number(process.argv[3]);
+const secondNum = Number(process.argv[4]);
+
+const result = (operator, firstNum, secondNum) => {
+  switch (operator) {
+    case "add":
+        console.log("Resposta:", firstNum + secondNum);
+      break;
+    case "sub":
+        console.log("Resposta:", firstNum - secondNum);
+      break;
+    case "div":
+        console.log("Resposta:", firstNum / secondNum);
+      break;
+    case "mult":
+        console.log("Resposta:", firstNum * secondNum);
+      break;
+  }
 };
 
-console.log(`Resposta: ${result}`)
+result(operator, firstNum, secondNum);
