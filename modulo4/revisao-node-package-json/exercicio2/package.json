@@ -1,11 +1,11 @@
 {
-  "name": "aula-node-package-json",
+  "name": "aula-node-package-json-exercicio2",
   "version": "1.0.0",
-  "description": "aula-node-package-json",
+  "description": "aula-node-package-json-exercicio2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node ./index.js"
   },
   "author": "moreira-Danilo-Silverio",
   "license": "ISC"

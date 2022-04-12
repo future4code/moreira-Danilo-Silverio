@@ -1,11 +1,11 @@
 {
-  "name": "aula-introducao-ao-typescript",
+  "name": "aula-node-package-json-exercicio1",
   "version": "1.0.0",
-  "description": "aula-introducao-ao-typescript",
+  "description": "aula-node-package-json-exercicio1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ./build/index.js"
+    "start": "node ./index.js"
   },
   "author": "moreira-Danilo-Silverio",
   "license": "ISC"
