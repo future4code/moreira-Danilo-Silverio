@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   Details,
+  FeedButton,
   HeadInfo,
   InfoCard,
   InformationField,
@@ -13,9 +14,11 @@ import {
 import Headers from "../../components/Header/Header";
 import { IMG_API } from "../../constants/url";
 import { getMovieDetail } from "../../services/getMovieById";
+import FeedLogo from "../../assets/images/feed-logo.png"
 
 const MovieDetail = () => {
   let params = useParams();
+  const navigate = useNavigate();
 
   const [movieInfo, setMovieInfo] = useState([]);
 
@@ -75,6 +78,9 @@ const MovieDetail = () => {
   return (
     <div>
       <Headers />
+      <FeedButton onClick={() => navigate("/")}>
+        <img src={FeedLogo} alt="Button to go back to the feed" />
+      </FeedButton>
       <InformationField>
         <MovieInformation>{information}</MovieInformation>
       </InformationField>

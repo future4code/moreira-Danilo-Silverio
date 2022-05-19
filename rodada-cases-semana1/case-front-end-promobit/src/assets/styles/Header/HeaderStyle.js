@@ -9,7 +9,7 @@ export const Header = styled.header`
     min-width: 100vw;
     padding-left: 5%;
     background-color: #5C16C5;
-    z-index: 2000;
+    z-index: 100;
     img{
         cursor: pointer;
     }
