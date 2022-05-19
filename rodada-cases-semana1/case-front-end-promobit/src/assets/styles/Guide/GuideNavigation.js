@@ -6,6 +6,7 @@ export const GuideContainer = styled.div`
     justify-content: space-around;
     flex-direction: column;
     height: fit-content;
+    padding-top: 3%;
     margin-bottom: 2%;
     background-color: #2D0C5E;
     h1{
