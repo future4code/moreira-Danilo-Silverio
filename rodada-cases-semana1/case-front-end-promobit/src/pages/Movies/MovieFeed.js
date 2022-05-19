@@ -21,7 +21,6 @@ const MovieFeed = () => {
     axios
       .get(`${BASE_URL}genre/movie/list${API_KEY}&language=pt-BR&page=${page}`)
       .then((response) => {
-        console.log(response.data.genres)
         setGenres(response.data.genres);
       })
       .catch((error) => {
@@ -32,7 +31,6 @@ const MovieFeed = () => {
     axios.get(`${BASE_URL}movie/popular${API_KEY}&language=pt-BR&page=${page}`)
     .then((response) => {
       setMovies(response.data.results)
-      console.log(response.data.results)
     })
     .catch((error) => {
       alert(error.message)

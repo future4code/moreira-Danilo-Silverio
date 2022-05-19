@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Cases Semana 1 - Front End Promobit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visualização no projeto com SURGE:
 
-## Available Scripts
+# Introdução
 
-In the project directory, you can run:
+Está cansado de ficar horas encarando telas tentando as achar os melhores filmes para assistir no seu tempo livre? Esse aplicativo é a solução, apresento a vocês o aplicativo que mostra somente os filmes mais pupolares do momento para curtir comsua família.
 
-### `npm start`
+# Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Qual seu objetivo?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Usando a API de filmes gratuita themoviedb em sua versão 3, foi desenvolvida uma listagem dos filmes mais populares do dia, consultando o endpoint `GET ${/movie/popular}` para realizar a listagem. Ao clicar em um item dessa listagem, outra página com os detalhes do filme escolhido deve ser exibida. Para acessar mais detalhes sobre o filme, foi utilizado o endpoint `GET {/movie/{movie_id}}`. Para garantir que o usuário encontre o filme que está procurando, essa lista está ser paginada.
 
-### `npm test`
+Foi utilizado como inspiração o seguinte design elaborado com o Figma:
+https://www.figma.com/file/rM7WPqhLY9ObnGzSCeWLxB/Teste-Front-End?node-id=16%3A1199
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Desafios do Projeto
 
-### `npm run build`
+### `Funcionais`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* O usuário deve ter acesso a uma listagem dos filmes mais populares do dia.
+* O usuário deve conseguir paginar a lista para encontrar novos filmes.
+* O usuário deve ter acesso a uma outra página com detalhes sobre o filme, ao clicar em um item na listagem.
+* A página com detalhes de um filme deve possuir uma rota própria e estar preparada para ser indexada em mecanismos de pesquisa.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Não funcionais`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* O app deverá ser criado usando React.
+* Na raiz do projeto, será necessário incluir um arquivo README md com as instruções para construir seu projeto localmente.
+* Opcionalmente você pode detalhar as razões pelas escolhas de ferramentas e técnicas aplicadas ao desafio.
+* O app deverá se comportar da mesma forma na última versão estável dos seguintes browsers: Chrome, Firefox, Edge.
+* O app deverá ser responsivo
 
-### `npm run eject`
+## Como faço rodar projeto?
+### `git clone`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone o link https do projeto no GitHub para seu repositório local através do terminal utilizando o comando `git clone link do projeto`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Após ter o repósitorio clonado em seu computador utilize o comando `npm install` para instalar todas suas dependências.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `npm run start`
 
-## Learn More
+O comando `npm run start` serve para iniciar o projeto e verificar como ele renderiza em seu computador.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Interface & Design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

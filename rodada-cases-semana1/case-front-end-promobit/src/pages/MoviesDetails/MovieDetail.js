@@ -30,8 +30,6 @@ const MovieDetail = () => {
     getApiDetail();
   }, [params.id]);
 
-  console.log(movieInfo);
-
   const information = movieInfo.map((item) => {
     const splitDate = item.release_date.split("-", 3);
 
