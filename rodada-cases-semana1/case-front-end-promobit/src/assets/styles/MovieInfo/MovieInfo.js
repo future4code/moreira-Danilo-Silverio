@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-export const InformationField = styled.div`
-    height: 100vh;
-`;
 export const FeedButton = styled.button`
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     height: 5vh;
     top: 0;
     right: 0;
@@ -19,9 +16,9 @@ export const FeedButton = styled.button`
         height: 100%;
     }
 `;
-export const MovieInformation = styled.div`
-    padding-top: 10vh;
+export const MovieInfos = styled.div`
     height: 70vh;
+    padding-top: 10vh;
     background-color: #2D0C5E;
     @media screen and (max-width: 750px){
         height: fit-content;
@@ -78,6 +75,7 @@ export const Details = styled.div`
     }
 `;
 export const HeadInfo = styled.div`
+    width: 80%;
     h1{
         font-weight: 700;
         font-size: 2rem;
@@ -98,7 +96,7 @@ export const HeadInfo = styled.div`
         background-color: #f29807;
     }
     @media screen and (max-width: 750px) {
-        
+        width: 100%;
         h1{
             font-size: 1.3rem;
         }
@@ -123,6 +121,10 @@ export const MovieGenre = styled.div`
         margin: 0;
     }
     @media screen and (max-width: 750px) {
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
         p{
             font-size: 0.7rem;
             margin-top: 5%;
@@ -130,13 +132,14 @@ export const MovieGenre = styled.div`
     }
 `;
 export const Overview = styled.div`
+    width: 90%;
     h2{
         font-weight: 700;
         font-size: 1.3rem;
         color: #fff;
     }
     p{
-        font-weight: 400;
+        font-weight: 300;
         font-size: 0.9rem;
         width: 90%;
         color: #fff;
@@ -146,6 +149,7 @@ export const Overview = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        width: 100%;
         p{
             font-size: 0.9rem;
             text-align: justify; 

@@ -6,6 +6,7 @@ export const GuideContainer = styled.div`
     justify-content: space-around;
     flex-direction: column;
     height: fit-content;
+    min-width: 100vw;
     padding-top: 3%;
     margin-bottom: 2%;
     background-color: #2D0C5E;
@@ -29,7 +30,7 @@ export const GuideContainer = styled.div`
             font-size: 1.18rem;
             line-height: 28px;
             width: 60%;
-            margin: 10% 0 10% 0;
+            margin: 20% 0 10% 0;
             color: #fff;
             padding-left: 6%;
         }
@@ -40,7 +41,7 @@ export const FilterGuide = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
+    min-width: 100%;
     h2{
         text-transform: uppercase;
         text-align: center;

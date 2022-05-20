@@ -5,6 +5,7 @@ export const Catalog = styled.div`
   grid-template-columns: repeat(5, 1fr);
   align-items: flex-start;
   justify-content: center;
+  max-width: 100vw;
   gap: 30px;
   padding: 1%;
   @media screen and (max-width: 750px) {
