@@ -3,7 +3,7 @@ import { API_KEY, movieUrl } from "../constants/url";
 
 export const getSimilar = async (id) => {
     try {
-        const { data } = await axios.get(`${movieUrl}/${id}/similar${API_KEY}&language=pt-BR`);
+        const { data } = await axios.get(`${movieUrl}/${id}/recommendations${API_KEY}&language=pt-BR`);
         
         return data.results;
 

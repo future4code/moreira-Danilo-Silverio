@@ -9,17 +9,19 @@ import { Footer } from "../../assets/styles/Pagination/Pagination";
 import { useNavigate } from "react-router-dom";
 
 
+
 const MovieFeed = () => {
 
   const [genres, setGenres] = useState([]);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
 
+
   const navigate = useNavigate();
 
   const getGenres = () => {
     axios
-      .get(`${BASE_URL}genre/movie/list${API_KEY}&language=pt-BR&page=${page}`)
+      .get(`${BASE_URL}genre/movie/list${API_KEY}&language=pt-BR`)
       .then((response) => {
         setGenres(response.data.genres);
       })
@@ -27,7 +29,8 @@ const MovieFeed = () => {
         alert(error.message);
       });
   };
-  const getMovies = () => {
+  console.log(genres)
+  const getMovies = (page) => {
     axios.get(`${BASE_URL}movie/popular${API_KEY}&language=pt-BR&page=${page}`)
     .then((response) => {
       setMovies(response.data.results)
@@ -39,22 +42,32 @@ const MovieFeed = () => {
 
   useEffect(() => {
     getGenres();
-    getMovies();
+    getMovies(page);
   }, [page]);
 
-  const movieGenres = genres.map((genre) => {
-    return <button key={genre.id}>{genre.name}</button>
+  const movieGenres = genres.map((genre, index) => {
+    
+    return <button key={index}>{genre.name}</button>
   });
+  
   const movieCatalog = movies.map((movie) => {
+        
+    const splitDate = movie.release_date.split("-", 3);
+    
+        const year = splitDate[0];
+    
+        const mounth = splitDate[1];
+    
+        const day = splitDate[2];
     return (
-      <MovieCard key={movie.id} onClick={() => navigate(`/movie/${movie.id}`)}>
-          <img src={IMG_API + movie.poster_path} alt={movie.title}/>
-          <p>{movie.vote_average}</p>
-          <h3>{movie.title}</h3>
-          <h4>{movie.release_date}</h4>
-      </MovieCard>
-    )
-    });
+        <MovieCard key={movie.id} onClick={() => navigate(`/movie/${movie.id}`)}>
+            <img src={IMG_API + movie.poster_path} alt={movie.title}/>
+            <p>{movie.vote_average}</p>
+            <h3>{movie.title}</h3>
+            <h4><strong>Lançamento:</strong> {day}/{mounth}/{year}</h4>
+        </MovieCard>
+        )
+      }); 
 
   return (
     <div>

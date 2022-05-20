@@ -46,7 +46,7 @@ export const MovieCard = styled.div`
     line-height: 24px;
   }
   h4 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 0.8em;
     line-height: 24px;
     color: #646464;

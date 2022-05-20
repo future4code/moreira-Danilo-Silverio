@@ -9,6 +9,7 @@ import MovieCast from "../../components/MovieInformation/MovieCast";
 import RecommendedMovie from "../../components/MovieInformation/RecommendedMovie";
 import { SimilarContent, SimilarTitle } from "../../assets/styles/MovieInfo/SimilarContent";
 
+
 const MovieDetail = () => {
 
   const navigate = useNavigate();
@@ -27,7 +28,6 @@ const MovieDetail = () => {
             </CastTitle>
             <MovieCast/>
           </CastContent>
-          <div></div>
           <SimilarContent>
             <SimilarTitle>
               <h1>Recomendações</h1>

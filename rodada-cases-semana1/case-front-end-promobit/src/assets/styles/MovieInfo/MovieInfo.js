@@ -17,7 +17,7 @@ export const FeedButton = styled.button`
     }
 `;
 export const MovieInfos = styled.div`
-    height: 70vh;
+    height: fit-content;
     padding-top: 10vh;
     background-color: #2D0C5E;
     @media screen and (max-width: 750px){
@@ -27,8 +27,8 @@ export const MovieInfos = styled.div`
 export const InfoCard = styled.div`
     display: flex;
     align-items: flex-start;
-    justify-content: space-around   ;
-    padding: 4%;
+    justify-content: space-around;
+    padding: 4% 0 0 4%;
     gap: 5%;
     @media screen and (max-width: 750px){
         display: flex;

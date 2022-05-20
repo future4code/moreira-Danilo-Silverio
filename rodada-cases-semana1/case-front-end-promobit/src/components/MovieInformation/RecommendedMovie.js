@@ -19,8 +19,6 @@ const RecommendedMovie = () => {
     getApiDetail();
   }, [params.id]);
 
-  console.log(similarFilm);
-
   const filmRecomendation = similarFilm.slice(0, 8).map((film) => {
     
     const splitDate = film.release_date.split("-", 3);
