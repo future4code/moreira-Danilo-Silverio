@@ -1,6 +1,6 @@
 # Cases Semana 1 - Front End Promobit
 
-Visualização no projeto com SURGE: icky-impulse.surge.sh
+Visualização no projeto com SURGE: case-frontend-promobit-danilo-silverio.surge.sh
 
 # Introdução
 
