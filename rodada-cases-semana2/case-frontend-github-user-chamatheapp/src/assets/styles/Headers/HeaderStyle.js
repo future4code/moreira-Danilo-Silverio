@@ -8,4 +8,9 @@ export const Header = styled.header`
     gap: 3%;
     background-color: #161b22;
     box-shadow: 0px 1px 20px #030508;
+    @media screen and (max-width: 770px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 `;

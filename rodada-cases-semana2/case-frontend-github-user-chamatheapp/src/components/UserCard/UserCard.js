@@ -33,7 +33,6 @@ const UserCard = () => {
                     {user.location}
                 </p>
             </UserContainer>
-
         )
     });
 

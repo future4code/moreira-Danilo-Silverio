@@ -30,12 +30,20 @@ export const UserContainer = styled.div`
             font-weight: 700;
         }
     }
+    @media screen and (max-width: 770px) {
+        width: 80%;
+        padding: 5% 5% 5% 5%;
+        margin: 20% 0 20% 0%;
+        border-radius: 10px;
+        background-color: transparent;
+    }
 `;
 export const ProfilePicture = styled.img`
     align-self: center;
     height: 10rem;
     width: 10rem;
     border-radius: 100%;
+    margin-bottom: 10%;
 `;
 export const Icon = styled.img`
     height: 1.5rem;

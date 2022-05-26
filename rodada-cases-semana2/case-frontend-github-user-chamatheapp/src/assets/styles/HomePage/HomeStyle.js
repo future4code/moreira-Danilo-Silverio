@@ -3,11 +3,19 @@ import styled from "styled-components";
 export const PageWrapper = styled.div`
     min-height: 100vh;
     max-width: 100vw;
-    background-color: #0d1117;
+    background-image: linear-gradient(120deg, #0d1117 40%, #000 90% );
 `;
 export const Main = styled.main`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: fit-content;
     width: 100%;
+    gap: 4%;
+    @media screen and (max-width: 770px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
 `;

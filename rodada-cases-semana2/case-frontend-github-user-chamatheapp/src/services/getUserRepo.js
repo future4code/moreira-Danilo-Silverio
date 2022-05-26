@@ -5,7 +5,7 @@ export const getUserRepo = async (username) => {
     try {
         const {data} = await axios.get(`${BASE_URL}${USERS}${username}/repos`)
         
-        return [data]
+        return data
 
     } catch (error) {
         alert(error.message)

@@ -6,6 +6,9 @@ export const SearchForm = styled.form`
     align-items: center;
     width: 50%;
     gap: 2%;
+    @media screen and (max-width: 770px) {
+        width: 100%;
+    }
 `;
 export const SearchInput = styled.input`
     height: 6vh;
@@ -20,6 +23,9 @@ export const SearchInput = styled.input`
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-size: 0.8rem;
+    }
+    @media screen and (max-width: 770px) {
+        width: 50%;
     }
 `;
 export const SubmitInput = styled.input`
