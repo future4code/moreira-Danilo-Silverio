@@ -1,8 +1,10 @@
 import React from "react";
-import { PageWrapper } from "../../assets/styles/HomePage/HomeStyle";
+import { Main, PageWrapper } from "../../assets/styles/HomePage/HomeStyle";
 import { Header } from "../../assets/styles/Headers/HeaderStyle";
 import GithubLogo from "../../assets/images/github-logo.png";
 import SearchComponent from "../../components/SearchComponent/SearchComponent";
+import UserCard from "../../components/UserCard/UserCard";
+import UserRepo from "../../components/UserRepo/UserRepositories";
 
 const HomePage = () => {
     
@@ -13,9 +15,10 @@ const HomePage = () => {
                 <img src={GithubLogo} alt="Github logo" />
                <SearchComponent/>
             </Header>
-            <div>
-                
-            </div>
+            <Main>
+                <UserCard/>
+                <UserRepo/>
+            </Main>
         </PageWrapper>
     )
 };

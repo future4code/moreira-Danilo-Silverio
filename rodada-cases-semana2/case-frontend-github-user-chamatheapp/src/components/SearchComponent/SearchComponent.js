@@ -3,7 +3,6 @@ import GlobalContext from "../../global/GlobalContext";
 import { SearchForm, SearchInput, SubmitInput } from "../../assets/styles/SearchComponent/SearchStyle";
 
 
-
 const SearchComponent = () => {
     
     const { username, onSubmitForm, onChangeUsername } = useContext(GlobalContext);
