@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const SearchForm = styled.form`
     display: flex;
     align-items: center;
@@ -22,10 +21,13 @@ export const SearchInput = styled.input`
         color: #fff;
         font-family: "Roboto", sans-serif;
         font-weight: 500;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     @media screen and (max-width: 770px) {
-        width: 50%;
+        width: 100%;
+        ::placeholder{
+            font-size: 0.7rem;
+        }
     }
 `;
 export const SubmitInput = styled.input`
@@ -35,13 +37,16 @@ export const SubmitInput = styled.input`
     border-radius: 8px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #fff;
     letter-spacing: 1px;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     :hover{
-        background-color: rgba(255, 255, 255, 0.582);
+        color: rgba(255, 255, 255, 0.582);
+    }
+    @media screen and (max-width: 770px) {
+        font-size: 0.6rem;
     }
 `;

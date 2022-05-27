@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { getUser } from "../services/getUser";
-import { getUserRepo } from "../services/getUserRepo";
+import getUser from "../services/getUser";
+import getUserRepo from "../services/getUserRepo";
 import GlobalContext from "./GlobalContext";
 
 const GlobalState = (props) => {
     
-    const [ userData, setUserData ] = useState([]);
     const [ username, setUsername ] = useState("");
+    const [ userData, setUserData ] = useState([]);
     const [ userRepo, setUserRepo ] = useState([]);
 
-    async function fetchData(username) {
-        setUserData(await getUser(username));
-        setUserRepo(await getUserRepo(username));
+    async function fetchData() {
+        if(username !== "") {
+            setUserData(await getUser(username));
+            setUserRepo(await getUserRepo(username));
+        } else if (!username) {
+            setUsername(false)
+        }
     };
 
     function onChangeUsername (event) {
@@ -24,6 +28,8 @@ const GlobalState = (props) => {
         setUsername("");
     };
 
+    console.log(userData)
+    console.log(userRepo)
     const data = {
         userData,
         username,

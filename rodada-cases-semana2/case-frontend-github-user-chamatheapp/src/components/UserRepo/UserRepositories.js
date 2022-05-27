@@ -1,34 +1,48 @@
 import React, { useContext } from "react";
 import GlobalContext from "../../global/GlobalContext";
-import { UserRepositories, RepositoryContainer } from "../../assets/styles/UserRepo/UserRepoStyle";
+import {
+  UserRepositories,
+  RepositoryContainer,
+  RepositoryInfo,
+  RepositoryInfo1,
+  RepositoryNotFound,
+} from "../../assets/styles/UserRepo/UserRepoStyle";
 import StartIcon from "../../assets/images/star-icon.png";
 
-
 const UserRepo = () => {
+  const { userRepo } = useContext(GlobalContext);
 
-    const { userRepo } = useContext(GlobalContext);
-
-    console.log(userRepo)
-
-    const viewRepositories = userRepo.map((repo, index) => {
-
-        return (
-            <UserRepositories key={repo.id}>
-                <h2>{repo.name}</h2>
-                <p>Language: <strong>{repo.language}</strong></p>
-                <p>
-                    <img src={StartIcon} alt="Stars count:" /> 
-                    <strong>{repo.stargazers_count}</strong>
-                </p>
-            </UserRepositories>
-        )
+  if (userRepo === undefined) {
+    return (
+      <RepositoryNotFound>
+        <h1>No Repository Found</h1>
+      </RepositoryNotFound>
+    );
+  } else if (userRepo !== undefined) {
+    const viewRepositories = userRepo.map((repo) => {
+      return (
+        <UserRepositories key={repo.id}>
+          <a href={repo.html_url} target="_blank">
+            {repo.name}
+          </a>
+          <RepositoryInfo>
+            <p>Language:</p>
+            <p>
+              <strong>{repo.language !== null ? repo.language : "No language specified"}</strong>
+            </p>
+          </RepositoryInfo>
+          <RepositoryInfo1>
+            <img src={StartIcon} alt="Stars count:" />
+            <p>
+              <strong>{repo.stargazers_count}</strong>
+            </p>
+          </RepositoryInfo1>
+        </UserRepositories>
+      );
     });
 
-    return (
-        <RepositoryContainer>
-            {viewRepositories}
-        </RepositoryContainer>
-    )
+    return <RepositoryContainer>{viewRepositories}</RepositoryContainer>;
+  }
 };
 
 export default UserRepo;
