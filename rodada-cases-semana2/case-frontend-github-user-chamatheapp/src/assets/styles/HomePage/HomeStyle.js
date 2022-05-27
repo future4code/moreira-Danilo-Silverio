@@ -12,7 +12,7 @@ export const Main = styled.main`
     height: fit-content;
     width: 100%;
     gap: 4%;
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 1000px) {
         display: flex;
         flex-direction: column;
         align-items: center;

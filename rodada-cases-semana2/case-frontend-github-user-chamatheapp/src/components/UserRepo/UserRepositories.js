@@ -22,11 +22,10 @@ const UserRepo = () => {
     const viewRepositories = userRepo.map((repo) => {
       return (
         <UserRepositories key={repo.id}>
-          <a href={repo.html_url} target="_blank">
+          <a href={repo.html_url} target="_blank" rel="noreferrer">
             {repo.name}
           </a>
           <RepositoryInfo>
-            <p>Language:</p>
             <p>
               <strong>{repo.language !== null ? repo.language : "No language specified"}</strong>
             </p>

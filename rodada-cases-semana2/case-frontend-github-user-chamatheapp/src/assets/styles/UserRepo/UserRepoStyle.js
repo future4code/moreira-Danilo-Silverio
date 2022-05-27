@@ -19,12 +19,16 @@ export const UserRepositories = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
-    height: 8rem;
+    height: 10rem;
     width: 100%;
-    border-bottom: 1px solid #C1D1D9;
+    border: 1px solid #535557a1;
+    border-radius: 20px;
+    box-shadow: 1px 3px 15px #2a2c2ee7;
+    margin-bottom: 5%;
     color: #C9D1D9;
     a{
-        font-size: 1.6rem;
+        text-align: center;
+        font-size: 1.4rem;
         font-weight: 700;
         color: #58A6FF;
     }
@@ -33,6 +37,10 @@ export const UserRepositories = styled.div`
         flex-direction: column;
         width: 90%;
         height: fit-content;
+        padding: 5%;
+        a{
+        font-size: 1rem;
+    }
     }
 `;
 export const RepositoryInfo = styled.div`
@@ -48,6 +56,14 @@ export const RepositoryInfo = styled.div`
         align-items: center;
         font-size: 1.2rem;
         font-weight: 300;
+    }
+    @media screen and (max-width: 770px){
+        img{
+            height: 1.4rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
     }
 `;
 export const RepositoryInfo1 = styled.div`
@@ -68,6 +84,9 @@ export const RepositoryInfo1 = styled.div`
     @media screen and (max-width: 770px){
         img{
             height: 1.4rem;
+        }
+        p{
+            font-size: 0.9rem;
         }
     }
 `;

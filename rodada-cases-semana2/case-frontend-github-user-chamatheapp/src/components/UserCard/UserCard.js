@@ -24,7 +24,7 @@ const UserCard = () => {
                     <ProfilePicture src={user.avatar_url} alt={user.login} />
                     <h1>{user.name}</h1>
                     <h2>{user.login}</h2>
-                    <SeeMoreLink href={user.html_url} target="_blank">See more</SeeMoreLink>
+                    <SeeMoreLink href={user.html_url} target="_blank" rel="noreferrer">See more</SeeMoreLink>
                     <Bio>{user.bio !== null ? user.bio : ""}</Bio>
                     <Info><Icon src={FollowersIcon} alt="Followers icon" /><span>{user.followers}</span> followers <span>{user.following}</span>  following</Info>
                     <Info><Icon src={CompanyIcon} alt={user.company} />{user.company !== null ? user.company : "No registered company"}</Info>

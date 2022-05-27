@@ -8,6 +8,7 @@ const GlobalState = (props) => {
     const [ username, setUsername ] = useState("");
     const [ userData, setUserData ] = useState([]);
     const [ userRepo, setUserRepo ] = useState([]);
+    const [ history, setHistory ] = useState([])
 
     async function fetchData() {
         if(username !== "") {
@@ -27,13 +28,15 @@ const GlobalState = (props) => {
         fetchData(username);
         setUsername("");
     };
-
-    console.log(userData)
+       
     console.log(userRepo)
+
     const data = {
         userData,
         username,
         userRepo,
+        history,
+        setHistory,
         onChangeUsername,
         onSubmitForm
     };
