@@ -11,9 +11,6 @@ const GlobalState = (props) => {
 
     const { data: lotteries } = useRequestData(`${BASE_URL}/loterias`, []);
     const { data: lotteriesContests } = useRequestData(`${BASE_URL}/loterias-concursos`, []);
-    
-    console.log(lotteries)
-    console.log(lotteriesContests)
 
     const loteryContestId =
     lotteriesContests[lotteriesId] && lotteriesContests[lotteriesId].concursoId;
