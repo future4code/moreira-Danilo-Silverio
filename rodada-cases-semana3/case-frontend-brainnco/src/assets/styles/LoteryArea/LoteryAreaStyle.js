@@ -7,6 +7,10 @@ export const LoteryField = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    @media screen and (max-width: 700px) {
+    height: 60vh;
+    width: 100vw;
+  }
     background-color: ${(props) => {
     switch (props.lotteriesId) {
       case 0:
@@ -37,6 +41,11 @@ export const Select = styled.select`
   font-size: 15px;
   line-height: 18px;
   color: #848484;
+  @media screen and (max-width: 700px) {
+    height: 8vh;
+    width: 50vw;
+    font-size: 0.9rem;
+  }
 `;
 export const Title = styled.div`
   display: flex;
@@ -52,6 +61,15 @@ export const Title = styled.div`
     font-weight: 700;
     color: #fff;
   }
+  @media screen and (max-width: 700px) {
+    img{
+    height: 10vh;
+    }
+    h1{
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
 `;
 export const Details = styled.div`
   padding-left: 10%;
@@ -65,5 +83,13 @@ export const Details = styled.div`
     font-weight: 700;
     font-size: 1.3rem;
     color: #fff;
+  }
+  @media screen and (max-width: 700px) {
+    h3{
+    font-size: 0.9rem;
+    }
+    p{
+      font-size: 1.1rem;
+    }
   }
 `;

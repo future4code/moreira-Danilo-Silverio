@@ -1,10 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { PageError } from "../../assets/styles/ErrorPage/ErrorStyle";
 
 const ErrorPage = () => {
+    
+    const navigate = useNavigate();
+    
     return (
-        <div>
-            Olá Error
-        </div>
+        <PageError>
+            <div>
+                <h1><span>Ops,</span> não encontramos esse caminho!</h1>
+                <button onClick={() => navigate("/")}>Loterias</button>
+            </div>
+        </PageError>
     )
 };
 

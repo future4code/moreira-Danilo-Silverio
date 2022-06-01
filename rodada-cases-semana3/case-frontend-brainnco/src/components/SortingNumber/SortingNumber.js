@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Numbers, ResultContent, SortingResults } from "../../assets/styles/SortingNumber/SortingNumberStyle";
+import { Alert, Numbers, ResultContent, SortingResults } from "../../assets/styles/SortingNumber/SortingNumberStyle";
 import GlobalStateContext from "../../global/GlobalStateContext";
 
 const SortingNumber = () => {
@@ -22,8 +22,11 @@ const SortingNumber = () => {
     return (
         <SortingResults>
             <ResultContent>
-                {resultNumbers()}
+                {resultNumbers()}          
             </ResultContent>
+            <Alert>
+                <p>Este sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA.</p>
+            </Alert>  
         </SortingResults>
     )
 };
