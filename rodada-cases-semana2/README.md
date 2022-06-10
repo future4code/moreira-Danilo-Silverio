@@ -32,4 +32,4 @@ Faça o clone desse repositório em seu computador e execute o comando:
 `npm install` e `npm run start`.
 
 ## <strong>Página da aplicação:</strong> 
-<a href="danilo-silverio-github-user-searcher.surge.sh">GitHub User Searcher</a>
+<a href="https://danilo-silverio-github-user-searcher.surge.sh/">GitHub User Searcher</a>
