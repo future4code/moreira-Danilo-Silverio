@@ -1,14 +1,48 @@
-<img align="center"  height="100" width="200" src="https://user-images.githubusercontent.com/94642853/162265948-bfbc3c95-982d-4561-b758-3fc6d6a0eb60.png"/>
-
-##
+### <img align="center"  height="100" width="200" src="https://user-images.githubusercontent.com/94642853/162265948-bfbc3c95-982d-4561-b758-3fc6d6a0eb60.png"/>
 
 ### <strong>Informações do Projeto</strong>
 <p>Desenvolvedor Front End Junior - Desafio Técnico</p>
 <p>Protótipo de Landing Page desenvolvido com as ferramentas HTML, CSS e Javascript.</p>
 
-##
 
-### Link do Surge:
+# Desafios do Projeto
+
+Neste teste você irá implementar um protótipo de uma landing page utilizando HTML, CSS e Javascript.
+
+Estamos procurando alguém que, além de replicar o layout com qualidade, seja capaz de tomar decisões criativas para deixar a interface com a maior qualidade possível. Ou seja, os mínimos detalhes vão valer muito!
+
+<strong>Por isso, dê atenção para:</strong>
+
+- Hover e animações (contamos com sua criatividade para isso);
+
+- Qualidade de responsividade: no link do protótipo temos a versão FULL HD de um site. Mas como desafio precisamos que seu layout se comporte bem em qualquer dispositivo (computadores, notebooks, e celulares);
+
+- Qualidade de comportamento: o comportamento das funcionalidades da landing page deve ser intuitivo e amigável ao usuário, por isso, além de bonitos, o menu mobile e os carrosséis precisam funcionar muito bem.
+
+### <strong>O que você pode usar?</strong>
+
+- HTML, CSS e Javascript. É válido também utilizar pré-processadores de CSS! (:
+
+### <strong>O que você NÃO pode usar?</strong>
+
+- Bootstrap (e frameworks / bibliotecas semelhantes), JQuery e qualquer biblioteca o recurso que utilize o mesmo.
+
+### <strong>O que será avaliado?</strong>
+
+- Responsividade: não adicionamos a versão mobile para dar liberdade pra você adaptar o layout da maneira mais criativa e funcional possível! Utilize suas técnicas para deixar o layout lindo em diferentes resoluções e dispositivos.
+
+- Qualidade visual: qualidade visual, fidelidade e responsividade precisam andar juntos.
+
+- Qualidade de código: seja consistente na criação de classes e não esqueça da identação;
+
+### <strong>Instruções e Recomendações:</strong>
+
+1. Acesse https://xd.adobe.com/view/f9b036e6-b5a6-4819-a6c5-4df3b33b8098-ace3/specs/ no link do protótipo você poderá encontrar todos os assets necessários, além das informações de font e demais elementos
+
+2. Para iconografia, utilize https://fontawesome.com/ (FA) e para criação do carrossel https://swiperjs.com/swiper-api (Swiper.js)
+
+
+### <strong>Link do Surge:</strong>
 
 - https://nerdweb.surge.sh/
 
